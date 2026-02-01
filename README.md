@@ -112,7 +112,7 @@ Built to look perfect on all devices.
 You can deploy this portfolio using:
 
 - GitHub Pages  
-- Netlify
+- [Netlify portfolio](https://inockportfolio.netlify.app/)
 
 ---
 

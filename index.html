@@ -3,432 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enock Humure - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Enock Humure | Software Engineer & A2SV Trainee</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-theme="dark">
+
+    <!-- Background Layers -->
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-scanlines"></div>
+    <div class="bg-noise"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Enock Humure</div>
+                <div class="logo">ENOCK<span>.</span>H</div>
                 <ul class="nav-links">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#vlogs">VLOGS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#education" data-i18n="nav_education">Education</a></li>
+                    <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
+                <div class="nav-controls">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <!-- Language Switcher -->
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="rw">RW</button>
+                        <button class="lang-btn" data-lang="sw">SW</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero / Introduction -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1><span data-i18n-span="hero_h1_span">Building</span> <span data-i18n-span="hero_h1_text">Digital Experiences.</span></h1>
+                    <p data-i18n="hero_desc">I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee, crafting high-performance digital solutions.</p>
+                    <div class="hero-buttons">
+                        <a href="Enock_Humure_CV_.pdf" class="btn-primary engineering-btn" download data-i18n="btn_cv">DOWNLOAD_CV.pdf</a>
+                        <a href="#projects" class="btn-secondary" data-i18n="btn_work">VIEW_WORK</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Linux-Style Terminal Widget -->
+                    <div class="terminal-widget">
+                        <div class="terminal-header">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                            <span class="terminal-title">enock@kali: ~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-text">
+                            <p><span class="prompt">enock@kali:~$</span> whoami</p>
+                            <p class="term-out">Enock Humure</p>
+                            <p><span class="prompt">enock@kali:~$</span> current_role</p>
+                            <p class="term-out">A2SV Trainee | AUCA Student</p>
+                            <p><span class="prompt">enock@kali:~$</span> skills_fetch</p>
+                            <p class="term-out">Java, Python, React, Linux...</p>
+                            <p><span class="prompt">enock@kali:~$</span> location</p>
+                            <p class="term-out">Kigali, Rwanda</p>
+                            <p><span class="prompt">enock@kali:~$</span> <span id="cursor-blink">_</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero" id="home">
-    <div class="container hero-container">
-        <div class="hero-text">
-            <p class="greeting">Hello, I am</p>
-            <h1 class="name">Enock Humure</h1>
-            <p class="description">
-                I am a self-taught software developer and Computer Science student at AUCA. I create impactful digital solutions and web applications.
-            </p>
-            <div class="hero-buttons">
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-visual">
+                    <div class="img-tilt-container">
+                        <div class="img-layer">
+                            <img src="inock pic.jpg" alt="Enock Headshot" class="img-primary">
+                            <img src="convention.jpg" alt="Enock Convention" class="img-secondary">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <p class="section-subtitle" data-i18n="about_subtitle">A Bit About Me</p>
+                    <h2 class="section-title" data-i18n="about_title">Passion for Innovation</h2>
+                    <p data-i18n="about_p">I am a dedicated software developer specialized in web development. I enjoy crafting functional, user-friendly applications while continuously exploring new technologies. My goal is to deliver high-quality solutions that make a meaningful impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <p class="section-subtitle" data-i18n="edu_subtitle">Career Path</p>
+            <h2 class="section-title" data-i18n="edu_title">Education</h2>
             
-                <a href="CV-Enock-Humure.pdf" class="btn download" download>Download CV</a>
-
-                <!-- Social Media -->
-<div class="hero-social">
-
-                <a href="https://x.com/cyamatara_1?s=11" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/ck__h7?igsh=MWFtcjZjMW5hczdkYw%3D%3D&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/humure-enock-a60111246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/EnockHumure" class="social-icon"><i class="fab fa-github"></i></a>
+            <div class="bento-grid">
+                <div class="bento-card span-2">
+                    <span class="badge">A2SV</span>
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h3 data-i18n="edu_a2sv_title">Africa to Silicon Valley Trainee</h3>
+                    <p data-i18n="edu_a2sv_desc">Intensive training in advanced data structures, algorithms, and high-performance software engineering principles.</p>
+                </div>
+                <div class="bento-card span-2">
+                    <span class="badge">AUCA</span>
+                    <i class="fas fa-university card-icon"></i>
+                    <h3 data-i18n="edu_auca_title">Software Engineering Undergraduate</h3>
+                    <p data-i18n="edu_auca_desc">Adventist University of Central Africa. Building core foundations in system architecture and development.</p>
+                </div>
             </div>
         </div>
-        </div>
-        <div class="hero-image">
-            <img src="inock pic.jpg" alt="Enock Humure" class="profile-image">
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <p class="section-subtitle" data-i18n="skills_subtitle">Tech Stack</p>
+            <h2 class="section-title" data-i18n="skills_title">Core Competencies</h2>
             
-            </div>
-    </div>
-</section>
-
-
-    <!-- About Me -->
-<section class="about" id="about">
-    <div class="container about-container">
-        <div class="about-image">
-            <img src="convention.jpg" alt="About Enock">
-        </div>
-        <div class="about-text">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">
-I am a dedicated and self-motivated software developer with a strong passion for creating innovative digital solutions. I specialize in web development and enjoy crafting applications that are both functional and user-friendly. Continuously exploring new technologies and programming languages, I strive to deliver high-quality solutions that make a meaningful impact in the digital world.
-
-            <!-- New "Click to Connect" button -->
-            <div class="about-buttons">
-                <a href="Contact Me" class="btn connect-btn">Click to Connect</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Skills -->
-<!-- Skills Section -->
-<section class="skills" id="skills">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">Here are my core competencies and technologies I work with.</p>
-
-        <!-- Tabs -->
-        <div class="skills-tabs">
-            <button class="tab-btn active" data-category="all">All Skills</button>
-            <button class="tab-btn" data-category="frontend">Frontend</button>
-            <button class="tab-btn" data-category="backend">Backend</button>
-            <button class="tab-btn" data-category="tools">Database & Tools</button>
-        </div>
-
-        <!-- Skills Grid -->
-        <div class="skills-grid">
-
-            <!-- Frontend Skills -->
-            <div class="skill-card frontend">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-                <span>Frontend</span>
-            </div>
-            <div class="skill-card frontend">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-                <span>Frontend</span>
-            </div>
-            <div class="skill-card frontend">
-                <i class="fab fa-js-square"></i>
-                <h3>JavaScript</h3>
-                <span>Frontend</span>
-            </div>
-            <div class="skill-card frontend">
-                <i class="fab fa-react"></i>
-                <h3>React.js</h3>
-                <span>Frontend</span>
-            </div>
-            <div class="skill-card frontend">
-                <i class="fab fa-react"></i>
-                <h3>React Native</h3>
-                <span>Frontend</span>
-            </div>
-            <div class="skill-card frontend">
-                <i class="fab fa-js"></i>
-                <h3>Next.js</h3>
-                <span>Frontend</span>
-            </div>
-
-            <!-- Backend Skills -->
-            <div class="skill-card backend">
-                <i class="fab fa-php"></i>
-                <h3>PHP</h3>
-                <span>Backend</span>
-            </div>
-            <div class="skill-card backend">
-                <i class="fab fa-node-js"></i>
-                <h3>Node.js</h3>
-                <span>Backend</span>
-            </div>
-            <div class="skill-card backend">
-                <i class="fas fa-server"></i>
-                <h3>Express.js</h3>
-                <span>Backend</span>
-            </div>
-            <div class="skill-card backend">
-                <i class="fas fa-server"></i>
-                <h3>Nest.js</h3>
-                <span>Backend</span>
-            </div>
-            <div class="skill-card backend">
-                <i class="fab fa-java"></i>
-                <h3>Java</h3>
-                <span>Backend</span>
-            </div>
-
-            <!-- Database & Tools -->
-            <div class="skill-card tools">
-                <i class="fas fa-database"></i>
-                <h3>MySQL</h3>
-                <span>Database</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fas fa-database"></i>
-                <h3>MongoDB</h3>
-                <span>Database</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fas fa-database"></i>
-                <h3>PostgreSQL</h3>
-                <span>Database</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
-                <span>Tool</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fas fa-cogs"></i>
-                <h3>githu</h3>
-                <span>Tool</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fas fa-code"></i>
-                <h3>VS Code</h3>
-                <span>Tool</span>
-            </div>
-            <div class="skill-card tools">
-                <i class="fas fa-paper-plane"></i>
-                <h3>figma</h3>
-                <span>Tool</span>
+            <div class="bento-grid">
+                <div class="bento-card span-2">
+                    <i class="fab fa-java card-icon"></i>
+                    <h3 data-i18n="skills_java">Java Programming</h3>
+                    <p data-i18n="skills_java_p">Scalable backend systems and enterprise applications.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fab fa-python card-icon"></i>
+                    <h3 data-i18n="skills_python">Python Programming</h3>
+                    <p data-i18n="skills_python_p">Developing scripts, automation, and data analysis tools.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fab fa-linux card-icon"></i>
+                    <h3 data-i18n="skills_linux">Linux Systems</h3>
+                    <p data-i18n="skills_linux_p">Proficiency in terminal operations, shell scripting, and system administration.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fab fa-react card-icon"></i>
+                    <h3 data-i18n="skills_frontend">Frontend Development</h3>
+                    <p data-i18n="skills_frontend_p">Building high-performance web apps with React.js, Next.js, and React Native for mobile.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fab fa-js card-icon"></i>
+                    <h3 data-i18n="skills_js">JavaScript</h3>
+                    <p data-i18n="skills_js_p">Modern ES6+ logic and interactive UX components.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fas fa-server card-icon"></i>
+                    <h3 data-i18n="skills_backend">Backend</h3>
+                    <p data-i18n="skills_backend_p">Node.js, Express, and Nest.js frameworks.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fas fa-database card-icon"></i>
+                    <h3 data-i18n="skills_db">Databases</h3>
+                    <p data-i18n="skills_db_p">PostgreSQL, MongoDB, and MySQL.</p>
+                </div>
+                <div class="bento-card span-2">
+                    <i class="fas fa-code card-icon"></i>
+                    <h3 data-i18n="skills_dsa">Algorithms & DSA</h3>
+                    <p data-i18n="skills_dsa_p">Strong problem-solving skills in data structures and algorithms, honed through A2SV training.</p>
+                </div>
+                <div class="bento-card">
+                    <i class="fab fa-git-alt card-icon"></i>
+                    <h3 data-i18n="skills_git">Git</h3>
+                    <p data-i18n="skills_git_p">Version control & DevOps workflows.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- JS for Tab Switching -->
-<script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const cards = document.querySelectorAll('.skill-card');
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <p class="section-subtitle" data-i18n="projects_subtitle">My Work</p>
+            <h2 class="section-title" data-i18n="projects_title">Recent Projects</h2>
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            const category = tab.getAttribute('data-category');
-
-            cards.forEach(card => {
-                if(category === 'all') {
-                    card.classList.remove('hidden');
-                } else {
-                    if(card.classList.contains(category)) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-
-
-        <!-- Projects -->
-<section class="projects" id="projects">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="projects-header">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Some of my recent work and achievements.</p>
-        </div>
-
-        <!-- Project Grid -->
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Appointment Booking System</h3>
-                <p class="short-text">A web-based system that allows users to book appointments with company leaders efficiently.</p>
-                <p class="full-text">This system lets users check availability, book appointments, receive notifications, and manage schedules effectively. Admins can manage leaders' calendars and track booking history.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p class="short-text">My personal portfolio website showcasing skills, projects, and achievements.</p>
-                <p class="full-text">It includes responsive design, interactive UI components, dynamic project showcases, and contact forms to allow potential employers or clients to reach me directly.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-
-            <div class="project-card">
-                <h3>Climate Change Detector</h3>
-                <p class="short-text">Monitors climate data and provides insights on environmental changes.</p>
-                <p class="full-text">This application fetches data from multiple sources, analyzes patterns, and presents visual charts showing temperature, CO2 levels, and environmental trends for informed decision-making.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-
-            <div class="project-card">
-                <h3>Home Budget Management System</h3>
-                <p class="short-text">Helps users manage household budgets and track expenses.</p>
-                <p class="full-text">Users can categorize income and expenses, generate monthly reports, visualize spending patterns, and receive alerts to prevent overspending.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-
-            <div class="project-card">
-                <h3>School Database System</h3>
-                <p class="short-text">Manages student, teacher, and course data efficiently.</p>
-                <p class="full-text">Includes enrollment tracking, grade management, attendance records, and detailed reporting for school administrators to monitor performance.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-
-            <div class="project-card">
-                <h3>Umudugudu System</h3>
-                <p class="short-text">Tracks residents and demographics in the village.</p>
-                <p class="full-text">Collects and organizes personal data of all residents, including age, occupation, and family info, to help local leaders manage resources and planning effectively.</p>
-                <button class="view-btn" onclick="toggleProjectText(this)">View More</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- JavaScript: Toggle "View More" -->
-<script>
-function toggleProjectText(button) {
-    const card = button.parentElement;
-    const fullText = card.querySelector('.full-text');
-
-    if (fullText.style.display === "block") {
-        fullText.style.display = "none";
-        button.textContent = "View More";
-    } else {
-        fullText.style.display = "block";
-        button.textContent = "View Less";
-    }
-
-    // Smooth scroll to show full text
-    fullText.scrollIntoView({ behavior: "smooth", block: "center" });
-}
-</script>
-
-
-
-    <!-- Vlogs -->
-<section class="vlogs" id="vlogs">
-    <div class="container">
-        <div class="vlogs-header">
-            <h2 class="section-title">Vlogs</h2>
-            <p class="section-subtitle">Day-in-the-life experiences and coding adventures as a software engineer.</p>
-        </div>
-
-        <div class="vlogs-grid">
-            <!-- Vlog 1 -->
-            <div class="project-card">
-                <img src="day at klab.jpeg" alt="Day at KLab">
-                <h3>Day at KLab</h3>
-                <p>A full day at KLab, collaborating and coding in a startup environment.</p>
-                <p class="full-text">From team standups to debugging sessions, this vlog showcases real-life developer work, including project planning and coding sprints.</p>
-                <button class="view-btn">View More</button>
-            </div>
-
-            <!-- Vlog 2 -->
-            <div class="project-card">
-                <img src="coding hackthon.jpeg" alt="Hackathon">
-                <h3>Coding Hackathon</h3>
-                <p>Participating in a 48-hour hackathon challenge with other developers.</p>
-                <p class="full-text">Watch how ideas transform into working projects, teamwork dynamics, and problem-solving under pressure.</p>
-                <button class="view-btn">View More</button>
-            </div>
-
-            <!-- Vlog 3 -->
-            <div class="project-card">
-                <img src="mornig routine.jpeg" alt="Morning Routine">
-                <h3>Developer Morning Routine</h3>
-                <p>Daily routines that boost productivity and coding efficiency.</p>
-                <p class="full-text">Includes learning new technologies, planning tasks, and coding exercises to improve skills every day.</p>
-                <button class="view-btn">View More</button>
-            </div>
-
-            <!-- Vlog 4 -->
-            <div class="project-card">
-                <img src="debugging live.jpeg" alt="Debugging">
-                <h3>Debugging Live</h3>
-                <p>See developers tackle bugs in real-time.</p>
-                <p class="full-text">Highlights problem-solving approaches, testing techniques, and collaboration in fixing complex issues in applications.</p>
-                <button class="view-btn">View More</button>
-            </div>
-
-            <!-- Vlog 5 -->
-            <div class="project-card">
-                <img src="exploring new languages.jpeg" alt="Learning New Language">
-                <h3>Exploring New Languages</h3>
-                <p>Learning a new programming language from scratch.</p>
-                <p class="full-text">Follow the process of understanding syntax, building projects, and applying best practices in real scenarios.</p>
-                <button class="view-btn">View More</button>
-            </div>
-
-            <!-- Vlog 6 -->
-            <div class="project-card">
-                <img src="team collaboration.jpeg" alt="Team Collaboration">
-                <h3>Team Collaboration</h3>
-                <p>Working with a team on software development projects.</p>
-                <p class="full-text">Focuses on code reviews, version control, agile methodologies, and teamwork essential for professional software engineers.</p>
-                <button class="view-btn">View More</button>
+            <div class="bento-grid">
+                <!-- Project 1 -->
+                <div class="bento-card span-2">
+                    <span class="badge">NEW</span>
+                    <h3 data-i18n="proj1_title">House of Fitness</h3>
+                    <p data-i18n="proj1_p">A comprehensive gym management system for tracking members, equipment, and scheduling classes effectively.</p>
+                    <span class="tech-tag">React</span><span class="tech-tag">Node.js</span>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bento-card span-2">
+                    <span class="badge">NEW</span>
+                    <h3 data-i18n="proj2_title">Schedule Planner</h3>
+                    <p data-i18n="proj2_p">A task management system that helps users organize their daily activities and plan their schedules efficiently.</p>
+                    <span class="tech-tag">Next.js</span><span class="tech-tag">PostgreSQL</span>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bento-card span-4">
+                    <span class="badge">ANALYSIS</span>
+                    <h3 data-i18n="proj3_title">Big Data Injury Analysis</h3>
+                    <p data-i18n="proj3_p">A large-scale data analysis project focused on analyzing injury patterns and providing data-driven insights for safety improvements.</p>
+                    <span class="tech-tag">Python</span><span class="tech-tag">Big Data</span>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="bento-card">
+                    <span class="badge">SYSTEM</span>
+                    <h3 data-i18n="proj4_title">Appointment System</h3>
+                    <p data-i18n="proj4_p">Web-based system for booking appointments with company leaders efficiently.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="bento-card">
+                    <span class="badge">VILLAGE</span>
+                    <h3 data-i18n="proj5_title">Umudugudu System</h3>
+                    <p data-i18n="proj5_p">Tracking residents and demographics for local leaders in the village.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="bento-card">
+                    <span class="badge">SCHOOL</span>
+                    <h3 data-i18n="proj6_title">School Database</h3>
+                    <p data-i18n="proj6_p">Efficiently manage student, teacher, and course data for administrators.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 7 -->
+                <div class="bento-card">
+                    <span class="badge">CLIMATE</span>
+                    <h3 data-i18n="proj7_title">Climate Detector</h3>
+                    <p data-i18n="proj7_p">Monitors climate data and providing insights on environmental changes.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 8 -->
+                <div class="bento-card">
+                    <span class="badge">BUDGET</span>
+                    <h3 data-i18n="proj8_title">Home Budget Manager</h3>
+                    <p data-i18n="proj8_p">Helping users manage household budgets and track expenses with detailed visual reports.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 9 -->
+                <div class="bento-card span-2">
+                    <span class="badge">PORTFOLIO</span>
+                    <h3 data-i18n="proj9_title">Portfolio Website</h3>
+                    <p data-i18n="proj9_p">My professional personal showcase built with advanced CSS glassmorphism and JS animations.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/EnockHumure" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- JS for View More -->
-<script>
-const viewBtns = document.querySelectorAll('.vlogs .view-btn');
-viewBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const fullText = btn.previousElementSibling;
-        fullText.classList.toggle('show');
-        btn.textContent = fullText.classList.contains('show') ? 'View Less' : 'View More';
-    });
-});
-</script>
-
-
-    <!-- Contact -->
     <!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="container contact-container">
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">
-                Feel free to get in touch with me. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-            </p>
-            <div class="contact-details">
-                <p><strong>Email:</strong> <a href="mailto:humureenock@gmail.com">humureenock@gmail.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+250788695675">+250 788695675</a></p>
-                <p><strong>Location:</strong> Kigali, Rwanda</p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p class="section-subtitle" data-i18n="contact_subtitle">Get in Touch</p>
+                    <h2><span data-i18n-span="contact_h2_text">Let's build something</span> <span data-i18n-span="contact_h2_span">amazing</span>.</h2>
+                    <div style="margin-top: 40px; color: var(--text-secondary);">
+                        <p><i class="fas fa-envelope" style="margin-right: 15px; color: var(--accent-blue);"></i> <span data-i18n="contact_email">EMAIL</span>: humureenock@gmail.com</p>
+                        <p><i class="fas fa-phone" style="margin-right: 15px; margin-top: 15px; color: var(--accent-blue);"></i> <span data-i18n="contact_tel">TEL</span>: +250 788695675</p>
+                        <p><i class="fas fa-location-dot" style="margin-right: 15px; margin-top: 15px; color: var(--accent-blue);"></i> <span data-i18n="contact_loc">LOC</span>: Kigali, Rwanda</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="First Name" data-i18n="form_fn" required>
+                        <input type="text" placeholder="Last Name" data-i18n="form_ln" required>
+                        <input type="email" placeholder="Email Address" class="full" data-i18n="form_em" required>
+                        <textarea rows="5" placeholder="Message Payload" class="full" data-i18n="form_msg" required></textarea>
+                        <button type="submit" class="btn-send full" data-i18n="form_btn">Send Packet</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <form>
-                <div class="form-row">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                </div>
-                <div class="form-row">
-                    <input type="tel" placeholder="Mobile Number" required>
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <textarea rows="5" placeholder="Leave a Message" required></textarea>
-                <button type="submit" class="btn-submit">Submit</button>
-                <p class="thank-note">Thank you for reaching out! Your collaboration can change the world.</p>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Enock Humure. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://x.com/cyamatara_1?s=11" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/ck__h7?igsh=MWFtcjZjMW5hczdkYw%3D%3D&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/humure-enock-a60111246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/EnockHumure" class="social-icon"><i class="fab fa-github"></i></a>
+            <p data-i18n="footer_copy">@2026</p>
+            <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px;">
+                <a href="https://github.com/EnockHumure" style="color: var(--text-secondary); font-size: 24px;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/notnow134234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" style="color: var(--text-secondary); font-size: 24px;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://leetcode.com/u/coach_Humure/" style="color: var(--text-secondary); font-size: 24px;"><i class="fas fa-code"></i></a>
+                <a href="https://x.com/cyamatara_1?s=11" style="color: var(--text-secondary); font-size: 24px;"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

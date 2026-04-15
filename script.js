@@ -9,7 +9,7 @@ const translations = {
         hero_h1_span: "Building",
         hero_h1_text: "Digital Experiences.",
         hero_desc: "I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee, crafting high-performance digital solutions.",
-        btn_cv: "DOWNLOAD_CV.pdf",
+        btn_cv: "DOWNLOAD_CV",
         btn_work: "VIEW_WORK",
         about_title: "Passion for Innovation",
         about_subtitle: "A Bit About Me",
@@ -62,6 +62,32 @@ const translations = {
         proj8_p: "Helping users manage household budgets and track expenses with detailed visual reports.",
         proj9_title: "Portfolio Website",
         proj9_p: "My professional personal showcase built with advanced CSS glassmorphism and JS animations.",
+        vlogs_title: "Life as an Engineer",
+        vlogs_subtitle: "Vlogs & Journey",
+        vlog1_title: "Day at kLab",
+        vlog1_desc: "Innovation and community at Kigali's tech hub.",
+        vlog2_title: "Coding Hackathon",
+        vlog2_desc: "Building solutions under pressure.",
+        vlog3_title: "Team Collaboration",
+        vlog3_desc: "Collective problem solving.",
+        vlog4_title: "Debugging Live",
+        vlog4_desc: "Deep diving into system bugs.",
+        vlog5_title: "Exploring New Tech",
+        vlog5_desc: "Always learning.",
+        vlog6_title: "Morning Routine",
+        vlog6_desc: "Starting the day with coffee and code.",
+        honors_title: "Achievements",
+        honors_subtitle: "Honors & Awards",
+        honor1_title: "Top Performer",
+        honor1_desc: "Recognized for excellence in algorithmic problem solving.",
+        honor2_title: "Dean's List",
+        honor2_desc: "Academic excellence at AUCA Software Engineering.",
+        honor3_title: "A2SV Excellence",
+        honor3_desc: "Outstanding progress in the A2SV training program.",
+        honor4_title: "AI & Machine Learning",
+        honor4_desc: "Certified expertise in developing intelligent systems and data models.",
+        honor5_title: "Professional Communication",
+        honor5_desc: "Mastery in technical storytelling and professional collaboration.",
         contact_title: "CONTACT_SYS",
         contact_subtitle: "Get in Touch",
         contact_h2_span: "amazing",
@@ -74,6 +100,7 @@ const translations = {
         form_em: "Email Address",
         form_msg: "Message Payload",
         form_btn: "Send Packet",
+        view_cert: "View Certificate",
         footer_copy: "© 2026"
     },
     rw: {
@@ -86,7 +113,7 @@ const translations = {
         hero_h1_span: "Kurema",
         hero_h1_text: "Ibintu Bigezweho.",
         hero_desc: "Ndi Enock Humure, umunyeshuri wiga Software Engineering muri AUCA n'umuhanga utozwa muri A2SV, ukora imishinga ikomeye mu by'ikoranabuhanga.",
-        btn_cv: "KURAMO_CV.pdf",
+        btn_cv: "KURAMO_CV",
         btn_work: "REBA_AKAZI",
         about_title: "Gukunda Udushya",
         about_subtitle: "Ibijyanye nanjye",
@@ -139,6 +166,32 @@ const translations = {
         proj8_p: "Gufasha abantu gucunga amafaranga bakoresha mu rugo berekwa imibare mu buryo bw'ishusho.",
         proj9_title: "Portfolio Website",
         proj9_p: "Urubuga rwanjye rwerekana imishinga n'ubuhanga bwanjye, rukozwe n'ikoranabuhanga rigezweho.",
+        vlogs_title: "Ubuzima bw'Umuhanga mu by'Ikoranabuhanga",
+        vlogs_subtitle: "Amashusho n'Urugendo",
+        vlog1_title: "Umunsi muri kLab",
+        vlog1_desc: "Guhanga udushya n'umuryango mu ruganda rw'ikoranabuhanga rwa Kigali.",
+        vlog2_title: "Coding Hackathon",
+        vlog2_desc: "Gukemura ibibazo ku muvuduko ukaze.",
+        vlog3_title: "Gukorera mu Itsinda",
+        vlog3_desc: "Gukemura ibibazo hamwe nk'itsinda.",
+        vlog4_title: "Gukosora Amakosa (Debugging)",
+        vlog4_desc: "Kwinjira mu miterere y'amakosa ya sisitemu.",
+        vlog5_title: "Kwiga Ikoranabuhanga Rishya",
+        vlog5_desc: "Guhora niga buri munsi.",
+        vlog6_title: "Gahunda ya mu gitondo",
+        vlog6_desc: "Gutangira umunsi n'ikawa ndetse no gukora porogaramu.",
+        honors_title: "Ibyagezweho",
+        honors_subtitle: "Icyubahiro n'Ibihembo",
+        honor1_title: "Uwitwaye Neza Kurusha Abandi",
+        honor1_desc: "Kugaragaza ubuhanga buhanitse mu gukemura ibibazo by'ikoranabuhanga.",
+        honor2_title: "Dean's List",
+        honor2_desc: "Ubuhanga mu masomo muri Software Engineering muri AUCA.",
+        honor3_title: "Ubuhanga muri A2SV",
+        honor3_desc: "Iterambere ryiza mu mahugurwa ya A2SV.",
+        honor4_title: "AI & Machine Learning",
+        honor4_desc: "Ubumenyi bwemejwe mu gukora sisitemu zifite ubuhanga n'imibare y'itubura ry'amakuru.",
+        honor5_title: "Itumanaho ry'Umwuga",
+        honor5_desc: "Ubuhanga mu kugaragaza imishinga y'ikoranabuhanga no gukorana n'abandi kinyamwuga.",
         contact_title: "Twandikire",
         contact_subtitle: "Vugana natwe",
         contact_h2_span: "bitangaje",
@@ -151,6 +204,7 @@ const translations = {
         form_em: "Imeyili yawe",
         form_msg: "Ubutumwa bwawe",
         form_btn: "Ohereza Ubutumwa",
+        view_cert: "Reba Impamyabumenyi",
         footer_copy: "© 2026"
     },
     sw: {
@@ -163,7 +217,7 @@ const translations = {
         hero_h1_span: "Kujenga",
         hero_h1_text: "Uzoefu wa Kidijitali.",
         hero_desc: "Mimi ni Enock Humure, mwanafunzi wa Software Engineering katika AUCA na mwanafunzi wa A2SV, nikitengeneza suluhisho za kidijitali za utendaji wa juu.",
-        btn_cv: "PAKUA_CV.pdf",
+        btn_cv: "PAKUA_CV",
         btn_work: "TAZAMA_KAZI",
         about_title: "Mapenzi ya Ubunifu",
         about_subtitle: "Kuhusu Mimi",
@@ -216,6 +270,32 @@ const translations = {
         proj8_p: "Kusaidia watumiaji kudhibiti bajeti za nyumbani na kufuatilia gharama kwa ripoti za kina za picha.",
         proj9_title: "Portfolio Website",
         proj9_p: "Onyesho langu la kitaaluma lililojengwa kwa teknolojia ya kisasa ya CSS na JS.",
+        vlogs_title: "Maisha kama Mhandisi",
+        vlogs_subtitle: "Vlog na Safari",
+        vlog1_title: "Siku katika kLab",
+        vlog1_desc: "Ubunifu na jamii katika kituo cha teknolojia cha Kigali.",
+        vlog2_title: "Coding Hackathon",
+        vlog2_desc: "Kujenga suluhisho chini ya shinikizo.",
+        vlog3_title: "Ushirikiano wa Timu",
+        vlog3_desc: "Kutatua matatizo kwa pamoja.",
+        vlog4_title: "Kurekebisha Hitilafu (Debugging)",
+        vlog4_desc: "Kuingia kwa kina katika hitilafu za mfumo.",
+        vlog5_title: "Kuchunguza Teknolojia Mpya",
+        vlog5_desc: "Kujifunza kila wakati.",
+        vlog6_title: "Ratiba ya Asubuhi",
+        vlog6_desc: "Kuanza siku kwa kahawa na nambari (code).",
+        honors_title: "Mafanikio",
+        honors_subtitle: "Heshima na Tuzo",
+        honor1_title: "Mtendaji Bora",
+        honor1_desc: "Inatambulika kwa ubora katika utatuzi wa matatizo ya algoriti.",
+        honor2_title: "Orodha ya Dekani (Dean's List)",
+        honor2_desc: "Ubora wa kitaaluma katika Software Engineering huko AUCA.",
+        honor3_title: "Ubora wa A2SV",
+        honor3_desc: "Maendeleo bora katika mpango wa mafunzo wa A2SV.",
+        honor4_title: "AI & Machine Learning",
+        honor4_desc: "Utaalamu uliothibitishwa katika kukuza mifumo ya akili na mifano ya data.",
+        honor5_title: "Mawasiliano ya Kitaalam",
+        honor5_desc: "Ujuzi katika usimulizi wa kiufundi na ushirikiano wa kitaalam.",
         contact_title: "MFUMO_MAWASILIANO",
         contact_subtitle: "Wasiliana Nasi",
         contact_h2_span: "ajabu",
@@ -228,6 +308,7 @@ const translations = {
         form_em: "Anwani ya Barua Pepe",
         form_msg: "Ujumbe",
         form_btn: "Tuma Paketi",
+        view_cert: "Angalia Cheti",
         footer_copy: "© 2026"
     },
     fr: {
@@ -240,7 +321,7 @@ const translations = {
         hero_h1_span: "Construire",
         hero_h1_text: "des Expériences Numériques.",
         hero_desc: "Je suis Enock Humure, étudiant en génie logiciel à l'AUCA et stagiaire A2SV, créant des solutions numériques de haute performance.",
-        btn_cv: "TELECHARGER_CV.pdf",
+        btn_cv: "TELECHARGER_CV",
         btn_work: "VOIR_TRAVAUX",
         about_title: "Passion pour l'Innovation",
         about_subtitle: "Un peu sur moi",
@@ -293,6 +374,32 @@ const translations = {
         proj8_p: "Aider les utilisateurs à gérer leurs budgets domestiques et à suivre leurs dépenses avec des rapports visuels détaillés.",
         proj9_title: "Site Web Portfolio",
         proj9_p: "Ma vitrine professionnelle personnelle construite avec du glassmorphisme CSS avancé et des animations JS.",
+        vlogs_title: "La vie d'un ingénieur",
+        vlogs_subtitle: "Vlogs et voyage",
+        vlog1_title: "Journée à kLab",
+        vlog1_desc: "Innovation et communauté au hub technologique de Kigali.",
+        vlog2_title: "Hackathon de programmation",
+        vlog2_desc: "Construire des solutions sous pression.",
+        vlog3_title: "Collaboration d'équipe",
+        vlog3_desc: "Résolution collective de problèmes.",
+        vlog4_title: "Débogage en direct",
+        vlog4_desc: "Plongée profonde dans les bogues du système.",
+        vlog5_title: "Explorer de nouvelles technologies",
+        vlog5_desc: "Toujours apprendre.",
+        vlog6_title: "Routine matinale",
+        vlog6_desc: "Commencer la journée avec du café et du code.",
+        honors_title: "Réalisations",
+        honors_subtitle: "Honneurs et récompenses",
+        honor1_title: "Meilleur performeur",
+        honor1_desc: "Reconnu pour son excellence dans la résolution de problèmes algorithmiques.",
+        honor2_title: "Liste du doyen",
+        honor2_desc: "Excellence académique en génie logiciel à l'AUCA.",
+        honor3_title: "Excellence A2SV",
+        honor3_desc: "Progrès exceptionnels dans le programme de formation A2SV.",
+        honor4_title: "IA et apprentissage automatique",
+        honor4_desc: "Expertise certifiée dans le développement de systèmes intelligents et de modèles de données.",
+        honor5_title: "Communication professionnelle",
+        honor5_desc: "Maîtrise du storytelling technique et de la collaboration professionnelle.",
         contact_title: "Système de Contact",
         contact_subtitle: "Contactez-nous",
         contact_h2_span: "incroyable",
@@ -305,6 +412,7 @@ const translations = {
         form_em: "Adresse Email",
         form_msg: "Message",
         form_btn: "Envoyer le Paquet",
+        view_cert: "Voir le Certificat",
         footer_copy: "© 2026"
     }
 };
@@ -438,21 +546,93 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }
 
-    // Visitor Counter Logic (Hacker Style)
+    // Visitor Counter Logic (Hacker Style - Local Storage Mock)
     const counterEl = document.getElementById('visit-counter');
     if (counterEl) {
-        // We use a public API to get a real count based on the URL
-        const siteUrl = window.location.hostname || "inockportfolio.netlify.app";
-        fetch(`https://api.countapi.xyz/hit/${siteUrl}/visits`)
-            .then(res => res.json())
-            .then(data => {
-                let count = data.value || 452; // Fallback to a realistic number
-                counterEl.innerText = count.toString().padStart(6, '0');
-            })
-            .catch(() => {
-                // If API fails, just show a cool random-looking number
-                counterEl.innerText = "000" + (Math.floor(Math.random() * 900) + 100);
-            });
+        let visits = parseInt(localStorage.getItem('portfolio_visits') || '452');
+        visits++;
+        localStorage.setItem('portfolio_visits', visits);
+        
+        // Animate counter
+        let currentDisplay = 0;
+        const target = visits;
+        const duration = 2000; // 2 seconds
+        const stepTime = Math.abs(Math.floor(duration / target));
+        
+        const timer = setInterval(() => {
+            currentDisplay += Math.ceil(target / 50); // Faster increment
+            if (currentDisplay >= target) {
+                counterEl.innerText = target.toString().padStart(6, '0');
+                clearInterval(timer);
+            } else {
+                counterEl.innerText = currentDisplay.toString().padStart(6, '0');
+            }
+        }, 30);
+    }
+
+    // Video Modal Logic
+    const modal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
+    const closeModal = document.querySelector('.close-modal');
+    const vlogCards = document.querySelectorAll('.vlog-card[data-video]');
+
+    vlogCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoSrc = card.getAttribute('data-video');
+            modalVideo.src = videoSrc;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+    });
+
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.src = '';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.src = '';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Simulated Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // UI State: Sending
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'UPLOADING_PACKET...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+
+            // Simulate Network Delay
+            setTimeout(() => {
+                // For demonstration, always succeed
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+                
+                // Reset button (though form is hidden)
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                
+                console.log('Form Submitted:', new FormData(contactForm));
+            }, 2000);
+        });
     }
 
     // Reveal Animations

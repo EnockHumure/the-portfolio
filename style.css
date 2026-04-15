@@ -444,6 +444,40 @@ section { padding: 120px 0; }
 .badge { display: inline-block; padding: 5px 12px; background: rgba(0, 209, 255, 0.15); color: var(--accent-blue); font-family: var(--font-mono); font-size: 11px; border-radius: 6px; margin-bottom: 18px; }
 .tech-tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; color: var(--text-secondary); margin-right: 10px; margin-top: 15px; padding: 2px 8px; background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
 
+/* ====================== VLOGS GALLERY ====================== */
+.vlog-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.vlog-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.vlog-card:hover .vlog-img {
+    transform: scale(1.1);
+}
+
+.vlog-content {
+    padding: 25px;
+    background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.vlog-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.vlog-card p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
 /* ====================== CONTACT ====================== */
 .contact-wrapper {
     background: var(--bg-card);

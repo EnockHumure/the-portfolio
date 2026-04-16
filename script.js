@@ -733,30 +733,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }
 
-    // Visitor Counter Logic (Hacker Style - Local Storage Mock)
-    const counterEl = document.getElementById('visit-counter');
-    if (counterEl) {
-        let visits = parseInt(localStorage.getItem('portfolio_visits') || '452');
-        visits++;
-        localStorage.setItem('portfolio_visits', visits);
-        
-        // Animate counter
-        let currentDisplay = 0;
-        const target = visits;
-        const duration = 2000; // 2 seconds
-        const stepTime = Math.abs(Math.floor(duration / target));
-        
-        const timer = setInterval(() => {
-            currentDisplay += Math.ceil(target / 50); // Faster increment
-            if (currentDisplay >= target) {
-                counterEl.innerText = target.toString().padStart(6, '0');
-                clearInterval(timer);
-            } else {
-                counterEl.innerText = currentDisplay.toString().padStart(6, '0');
-            }
-        }, 30);
-    }
-
     // Video Modal Logic
     const modal = document.getElementById('video-modal');
     const modalVideo = document.getElementById('modal-video');

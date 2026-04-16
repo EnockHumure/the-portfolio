@@ -36,6 +36,10 @@
                     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="nav-controls">
+                    <!-- Cursor Toggle -->
+                    <button class="theme-toggle" id="cursor-toggle" title="Toggle Custom Cursor">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </button>
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobile-menu-toggle">
                         <i class="fas fa-bars"></i>
@@ -146,51 +150,71 @@
             <p class="section-subtitle" data-i18n="skills_subtitle">Tech Stack</p>
             <h2 class="section-title" data-i18n="skills_title">Core Competencies</h2>
             
-            <div class="bento-grid">
-                <div class="bento-card span-2">
-                    <i class="fab fa-java card-icon"></i>
-                    <h3 data-i18n="skills_java">Java Programming</h3>
-                    <p data-i18n="skills_java_p">Scalable backend systems and enterprise applications.</p>
+            <!-- Category Tabs -->
+            <div class="skills-tabs">
+                <button class="skill-tab-btn active" data-category="frontend">FRONTEND</button>
+                <button class="skill-tab-btn" data-category="backend">BACKEND</button>
+                <button class="skill-tab-btn" data-category="tools">TOOLS_&_SYSTEMS</button>
+            </div>
+
+            <!-- Skills Containers -->
+            <div class="skills-container active" id="skills-frontend">
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <i class="fab fa-react card-icon"></i>
+                        <h3 data-i18n="skills_frontend">Frontend Development</h3>
+                        <p data-i18n="skills_frontend_p">Building high-performance web apps with React.js and Next.js.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fab fa-js card-icon"></i>
+                        <h3 data-i18n="skills_js">JavaScript</h3>
+                        <p data-i18n="skills_js_p">Modern ES6+ logic and interactive UX components.</p>
+                    </div>
                 </div>
-                <div class="bento-card">
-                    <i class="fab fa-python card-icon"></i>
-                    <h3 data-i18n="skills_python">Python Programming</h3>
-                    <p data-i18n="skills_python_p">Developing scripts, automation, and data analysis tools.</p>
+            </div>
+
+            <div class="skills-container" id="skills-backend">
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <i class="fab fa-java card-icon"></i>
+                        <h3 data-i18n="skills_java">Java Programming</h3>
+                        <p data-i18n="skills_java_p">Scalable backend systems and enterprise applications.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fab fa-python card-icon"></i>
+                        <h3 data-i18n="skills_python">Python Programming</h3>
+                        <p data-i18n="skills_python_p">Developing scripts, automation, and data analysis tools.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fas fa-server card-icon"></i>
+                        <h3 data-i18n="skills_backend">Backend</h3>
+                        <p data-i18n="skills_backend_p">Node.js, Express, and Nest.js frameworks.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fas fa-database card-icon"></i>
+                        <h3 data-i18n="skills_db">Databases</h3>
+                        <p data-i18n="skills_db_p">PostgreSQL, MongoDB, and MySQL.</p>
+                    </div>
                 </div>
-                <div class="bento-card">
-                    <i class="fab fa-linux card-icon"></i>
-                    <h3 data-i18n="skills_linux">Linux Systems</h3>
-                    <p data-i18n="skills_linux_p">Proficiency in terminal operations, shell scripting, and system administration.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fab fa-react card-icon"></i>
-                    <h3 data-i18n="skills_frontend">Frontend Development</h3>
-                    <p data-i18n="skills_frontend_p">Building high-performance web apps with React.js, Next.js, and React Native for mobile.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fab fa-js card-icon"></i>
-                    <h3 data-i18n="skills_js">JavaScript</h3>
-                    <p data-i18n="skills_js_p">Modern ES6+ logic and interactive UX components.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fas fa-server card-icon"></i>
-                    <h3 data-i18n="skills_backend">Backend</h3>
-                    <p data-i18n="skills_backend_p">Node.js, Express, and Nest.js frameworks.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fas fa-database card-icon"></i>
-                    <h3 data-i18n="skills_db">Databases</h3>
-                    <p data-i18n="skills_db_p">PostgreSQL, MongoDB, and MySQL.</p>
-                </div>
-                <div class="bento-card span-2">
-                    <i class="fas fa-code card-icon"></i>
-                    <h3 data-i18n="skills_dsa">Algorithms & DSA</h3>
-                    <p data-i18n="skills_dsa_p">Strong problem-solving skills in data structures and algorithms, honed through A2SV training.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fab fa-git-alt card-icon"></i>
-                    <h3 data-i18n="skills_git">Git</h3>
-                    <p data-i18n="skills_git_p">Version control & DevOps workflows.</p>
+            </div>
+
+            <div class="skills-container" id="skills-tools">
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <i class="fab fa-git-alt card-icon"></i>
+                        <h3 data-i18n="skills_git">Git & GitHub</h3>
+                        <p data-i18n="skills_git_p">Professional version control, branch management, pull requests, and collaborative workflows.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fab fa-linux card-icon"></i>
+                        <h3 data-i18n="skills_linux">Linux Systems</h3>
+                        <p data-i18n="skills_linux_p">Proficiency in terminal operations, shell scripting, and system administration.</p>
+                    </div>
+                    <div class="bento-card">
+                        <i class="fas fa-code card-icon"></i>
+                        <h3 data-i18n="skills_dsa">Algorithms & DSA</h3>
+                        <p data-i18n="skills_dsa_p">Strong problem-solving skills in data structures and algorithms, honed through A2SV training.</p>
+                    </div>
                 </div>
             </div>
         </div>

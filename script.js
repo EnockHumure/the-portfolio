@@ -6,14 +6,14 @@ const translations = {
         nav_skills: "Skills",
         nav_projects: "Projects",
         nav_contact: "Contact",
-        hero_h1_span: "Building",
-        hero_h1_text: "Digital Experiences.",
-        hero_desc: "I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee, crafting high-performance digital solutions.",
+        hero_h1_span: "Backend",
+        hero_h1_text: "System Architect.",
+        hero_desc: "I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee. I specialize in building robust backend systems with Spring Boot, NestJS, and cloud technologies.",
         btn_cv: "DOWNLOAD_CV",
         btn_work: "VIEW_WORK",
-        about_title: "Passion for Innovation",
-        about_subtitle: "A Bit About Me",
-        about_p: "I am a dedicated software developer specialized in web development. I enjoy crafting functional, user-friendly applications while continuously exploring new technologies. My goal is to deliver high-quality solutions that make a meaningful impact.",
+        about_title: "Backend Specialist",
+        about_subtitle: "About Me",
+        about_p: "I am a dedicated Backend Engineer with a deep focus on Spring Boot and NestJS. I thrive on architecting scalable APIs, optimizing database performance, and building secure, high-availability systems. My goal is to build the invisible engines that power modern digital experiences.",
         edu_title: "Education",
         edu_subtitle: "Career Path",
         edu_a2sv_title: "Africa to Silicon Valley Trainee",
@@ -22,40 +22,40 @@ const translations = {
         edu_auca_desc: "Adventist University of Central Africa. Building core foundations in system architecture and development.",
         skills_title: "Core Competencies",
         skills_subtitle: "Tech Stack",
-        skills_java: "Java Programming",
-        skills_java_p: "Scalable backend systems and enterprise applications.",
+        skills_java: "Spring Boot / Java",
+        skills_java_p: "Building microservices, REST APIs, and enterprise-grade backend systems.",
         skills_python: "Python Programming",
         skills_python_p: "Developing scripts, automation, and data analysis tools.",
         skills_linux: "Linux Systems",
         skills_linux_p: "Proficiency in terminal operations, shell scripting, and system administration.",
         skills_leetcode: "LeetCode / Problem Solving",
         skills_leetcode_p: "Consistent practice in algorithmic challenges and data structures.",
-        skills_frontend: "Frontend Development",
-        skills_frontend_p: "Building high-performance web apps with React.js, Next.js, and React Native for mobile.",
-        skills_js: "JavaScript",
-        skills_js_p: "Modern ES6+ logic and interactive UX components.",
-        skills_backend: "Backend",
-        skills_backend_p: "Node.js, Express, and Nest.js frameworks.",
-        skills_db: "Databases",
-        skills_db_p: "PostgreSQL, MongoDB, and MySQL.",
+        skills_frontend: "Frontend Awareness",
+        skills_frontend_p: "Bridging the gap with React.js and Next.js to build full-stack capable solutions.",
+        skills_js: "NestJS / Node.js",
+        skills_js_p: "Modern scalable server-side applications using TypeScript and Node ecosystem.",
+        skills_backend: "Backend Architecture",
+        skills_backend_p: "Designing scalable, secure, and performant server architectures.",
+        skills_db: "Databases & ORMs",
+        skills_db_p: "Proficiency in PostgreSQL, MongoDB, and MySQL with Prisma/TypeORM.",
         skills_dsa: "Algorithms & DSA",
         skills_dsa_p: "Strong problem-solving skills in data structures and algorithms, honed through A2SV training.",
-        skills_git: "Git",
-        skills_git_p: "Version control & DevOps workflows.",
+        skills_git: "Git & GitHub",
+        skills_git_p: "Professional version control, branch management, pull requests, and collaborative workflows.",
         projects_title: "Recent Projects",
         projects_subtitle: "My Work",
         proj1_title: "House of Fitness",
         proj1_p: "A comprehensive gym management system for tracking members, equipment, and scheduling classes effectively.",
         proj2_title: "Schedule Planner",
-        proj2_p: "A task management system that helps users organize their daily activities and plan their schedules efficiently.",
+        proj2_p: "A smart study planner built for students to organize tasks, manage deadlines, and receive guidance.",
         proj3_title: "Big Data Injury Analysis",
-        proj3_p: "A large-scale data analysis project focused on analyzing injury patterns and providing data-driven insights for safety improvements.",
+        proj3_p: "A large-scale data analysis project focused on analyzing injury patterns and providing data-driven insights.",
         proj4_title: "PDTAS",
         proj4_p: "Patient Disease Tracking Analytics System focused on database management and tracking health analytics.",
-        proj8_title: "Home Budget Manager",
-        proj8_p: "Helping users manage household budgets and track expenses with detailed visual reports.",
-        proj_appointment_title: "Appointment System",
-        proj_appointment_p: "Web-based system for booking appointments with company leaders efficiently.",
+        proj8_title: "Finance Tracker",
+        proj8_p: "A professional money management tool to track expenses, visualize spending, and control finances.",
+        proj_appointment_title: "AppointmentPro",
+        proj_appointment_p: "A high-performance system for scheduling leadership meetings and consultations efficiently.",
         proj9_title: "Portfolio Website",
         proj9_p: "My professional personal showcase built with advanced CSS glassmorphism and JS animations.",
         vlogs_title: "Life as an Engineer",
@@ -106,14 +106,14 @@ const translations = {
         nav_skills: "Ubumenyi",
         nav_projects: "Imishinga",
         nav_contact: "Twandikire",
-        hero_h1_span: "Kurema",
-        hero_h1_text: "Ibintu Bigezweho.",
-        hero_desc: "Ndi Enock Humure, umunyeshuri wiga Software Engineering muri AUCA n'umuhanga utozwa muri A2SV, ukora imishinga ikomeye mu by'ikoranabuhanga.",
+        hero_h1_span: "Backend",
+        hero_h1_text: "Umuhanga muri Sisitemu.",
+        hero_desc: "Ndi Enock Humure, umunyeshuri wiga Software Engineering muri AUCA n'umuhanga utozwa muri A2SV. Mwibanda ku gukora sisitemu zikomeye (Backend) nkoresheje Spring Boot, NestJS, n'ikoranabuhanga rya cloud.",
         btn_cv: "KURAMO_CV",
         btn_work: "REBA_AKAZI",
-        about_title: "Gukunda Udushya",
+        about_title: "Umuhanga muri Backend",
         about_subtitle: "Ibijyanye nanjye",
-        about_p: "Ndi umuhanga mu gukora porogaramu z'ikoranabuhanga wibanda cyane ku gukora imbuga za interineti. Nkunda gukora porogaramu zikora neza kandi zoroshye gukoresha mu gihe nkomeza kwiga ikoranabuhanga rishya. Intego yanjye ni ugukora ibintu byiza bifite akamaro kagaragara.",
+        about_p: "Ndi umuhanga muri Backend wibanda cyane kuri Spring Boot na NestJS. Nkunda gukora imishinga ikomeye, itubura ry'ububiko bw'inyandiko (database), no gukora sisitemu zitekanye kandi zikora neza cyane.",
         edu_title: "Amashuri",
         edu_subtitle: "Inzira yanjye",
         edu_a2sv_title: "Utozwa muri Africa to Silicon Valley",
@@ -122,44 +122,40 @@ const translations = {
         edu_auca_desc: "Muri Kaminuza y'Abadiventisiti y'Afurika yo hagati (AUCA). Kwiga imisingi ikomeye y'ikoranabuhanga no gukora porogaramu.",
         skills_title: "Ubumenyi Bukomeye",
         skills_subtitle: "Ikoranabuhanga nkoresha",
-        skills_java: "Gukoresha Java",
-        skills_java_p: "Gukora porogaramu zikomeye z'ubucuruzi n'izikoreshwa n'ibigo binini.",
+        skills_java: "Spring Boot / Java",
+        skills_java_p: "Gukora microservices na REST APIs zikomeye z'ubucuruzi.",
         skills_python: "Gukoresha Python",
         skills_python_p: "Gukora porogaramu, uburyo bwo kwikora, n'itubura ry'amakuru.",
         skills_linux: "Sisitemu za Linux",
         skills_linux_p: "Ubumenyi mu gukoresha terminal, shell scripting, n'imicungire ya sisitemu.",
         skills_leetcode: "LeetCode / Problem Solving",
         skills_leetcode_p: "Gukemura ibibazo bikomeye by'ikoranabuhanga buri munsi.",
-        skills_frontend: "Gukora Imbuga (Frontend)",
-        skills_frontend_p: "Gukora imbuga zikora neza cyane nkoresheje React.js, Next.js, na React Native ku ma terefone.",
-        skills_js: "JavaScript",
-        skills_js_p: "Ubuhanga bugezweho bwa ES6+ n'imbuga zishimishije gukoresha.",
-        skills_backend: "Gukora Porogaramu (Backend)",
-        skills_backend_p: "Ikoranabuhanga rya Node.js, Express, na Nest.js.",
-        skills_db: "Ububiko bw'Inyandiko (Databases)",
-        skills_db_p: "PostgreSQL, MongoDB, na MySQL.",
+        skills_frontend: "Frontend Awareness",
+        skills_frontend_p: "Gukoresha React.js na Next.js mu gukora imishinga yuzuye (Full-stack).",
+        skills_js: "NestJS / Node.js",
+        skills_js_p: "Gukora porogaramu zigezweho zo ku ruhande rwa seriveri nkoresheje TypeScript.",
+        skills_backend: "Backend Architecture",
+        skills_backend_p: "Gushushanya imiterere ya seriveri zikomeye kandi zitekanye.",
+        skills_db: "Ububiko bw'Inyandiko",
+        skills_db_p: "Ubumenyi muri PostgreSQL, MongoDB, na MySQL nkoresheje Prisma/TypeORM.",
         skills_dsa: "Algorithms & DSA",
         skills_dsa_p: "Ubumenyi bukomeye bwo gukemura ibibazo by'ikoranabuhanga n'uburyo bwo kubika inyandiko neza, nigiye muri A2SV.",
-        skills_git: "Git",
-        skills_git_p: "Gucunga inyandiko za porogaramu n'uburyo bwo kuzigeza ku bakoresha.",
+        skills_git: "Git & GitHub",
+        skills_git_p: "Gucunga inyandiko za porogaramu n'uburyo bwo gukorana n'abandi kinyamwuga.",
         projects_title: "Imishinga Iheruka",
         projects_subtitle: "Akazi kanjye",
         proj1_title: "House of Fitness",
         proj1_p: "Uburyo bwo gucunga siporo (Gym) bugenzura abanyamuryango, ibikoresho, no gushyiraho gahunda z'amasomo neza.",
         proj2_title: "Schedule Planner",
-        proj2_p: "Uburyo bufasha abantu gupanga ibyo bakora buri munsi no gucunga igihe cyabo neza.",
+        proj2_p: "Uburyo bufasha abanyeshuri gupanga ibyo bakora n'amasomo yabo neza.",
         proj3_title: "Big Data Injury Analysis",
-        proj3_p: "Umushinga ukomeye usesengura amakuru y'imvune n'ibyago hagamijwe gutanga inama zo kongera umutekano.",
-        proj4_title: "Appointment System",
-        proj4_p: "Uburyo bwo kuri interineti bwo gufata gahunda yo guhura n'abayobozi b'ikigo neza.",
-        proj5_title: "Umudugudu System",
-        proj5_p: "Gucunga amakuru y'abaturage n'imibare yabo ku bayobozi b'imidugudu.",
-        proj6_title: "School Database",
-        proj6_p: "Gucunga neza amakuru y'abanyeshuri, abarimu, n'amasomo ku bayobozi b'amashuri.",
-        proj7_title: "Climate Detector",
-        proj7_p: "Kugenzura amakuru y'ikirere no gutanga amakuru ku buringanire bw'ibidukikije.",
-        proj8_title: "Home Budget Manager",
-        proj8_p: "Gufasha abantu gucunga amafaranga bakoresha mu rugo berekwa imibare mu buryo bw'ishusho.",
+        proj3_p: "Umushinga ukomeye usesengura amakuru y'imvune hagamijwe gutanga inama z'umutekano.",
+        proj4_title: "PDTAS",
+        proj4_p: "Uburyo bwo gukurikirana indwara z'abarwayi bwibanda ku gusesengura amakuru.",
+        proj8_title: "Finance Tracker",
+        proj8_p: "Uburyo bwo gucunga amafaranga, gukurikirana ibyakoreshejwe, no kugenzura imari.",
+        proj_appointment_title: "AppointmentPro",
+        proj_appointment_p: "Sisitemu yo gufata gahunda yo guhura n'abayobozi neza kandi vuba.",
         proj9_title: "Portfolio Website",
         proj9_p: "Urubuga rwanjye rwerekana imishinga n'ubuhanga bwanjye, rukozwe n'ikoranabuhanga rigezweho.",
         vlogs_title: "Ubuzima bw'Umuhanga mu by'Ikoranabuhanga",
@@ -210,14 +206,14 @@ const translations = {
         nav_skills: "Ujuzi",
         nav_projects: "Miradi",
         nav_contact: "Mawasiliano",
-        hero_h1_span: "Kujenga",
-        hero_h1_text: "Uzoefu wa Kidijitali.",
-        hero_desc: "Mimi ni Enock Humure, mwanafunzi wa Software Engineering katika AUCA na mwanafunzi wa A2SV, nikitengeneza suluhisho za kidijitali za utendaji wa juu.",
+        hero_h1_span: "Backend",
+        hero_h1_text: "Mbunifu wa Mifumo.",
+        hero_desc: "Mimi ni Enock Humure, mwanafunzi wa Software Engineering katika AUCA na mwanafunzi wa A2SV. Nimebobea katika kujenga mifumo thabiti ya backend kwa kutumia Spring Boot na NestJS.",
         btn_cv: "PAKUA_CV",
         btn_work: "TAZAMA_KAZI",
-        about_title: "Mapenzi ya Ubunifu",
+        about_title: "Mtaalamu wa Backend",
         about_subtitle: "Kuhusu Mimi",
-        about_p: "Mimi ni mtengenezaji wa programu aliyejitolea aliyebobea katika ukuzaji wa wavuti. Ninafurahia kutengeneza programu zinazofanya kazi vizuri na rahisi kutumia huku nikiendelea kuchunguza teknolojia mpya. Lengo langu ni kutoa suluhisho za hali ya juu ambazo zina athari ya maana.",
+        about_p: "Mimi ni Mhandisi wa Backend aliyejitolea kwa kuzingatia sana Spring Boot na NestJS. Ninapenda kuunda APIs zinazoweza kupanuka na kuboresha utendaji wa hifadhidata.",
         edu_title: "Elimu",
         edu_subtitle: "Njia ya Kazi",
         edu_a2sv_title: "Mwanafunzi wa Africa to Silicon Valley",
@@ -226,44 +222,40 @@ const translations = {
         edu_auca_desc: "Adventist University of Central Africa (AUCA). Kujenga misingi imara katika usanifu wa mifumo na maendeleo.",
         skills_title: "Ujuzi Muhimu",
         skills_subtitle: "Teknolojia Ninazotumia",
-        skills_java: "Programu ya Java",
-        skills_java_p: "Mifumo ya backend inayoweza kupanuka na programu za biashara.",
+        skills_java: "Spring Boot / Java",
+        skills_java_p: "Kujenga microservices na REST APIs kwa mifumo ya biashara.",
         skills_python: "Programu ya Python",
         skills_python_p: "Kutengeneza hati, otomatiki, na zana za uchambuzi wa data.",
         skills_linux: "Mifumo ya Linux",
         skills_linux_p: "Ujuzi katika shughuli za terminal, shell scripting, na usimamizi wa mfumo.",
         skills_leetcode: "LeetCode / Problem Solving",
         skills_leetcode_p: "Kufanya mazoezi ya algoriti kila siku kwenye LeetCode.",
-        skills_frontend: "Ukuzaji wa Frontend",
-        skills_frontend_p: "Kujenga programu za wavuti za utendaji wa juu kwa React.js, Next.js, na React Native kwa simu.",
-        skills_js: "JavaScript",
-        skills_js_p: "Mantiki ya kisasa ya ES6+ na vipengele shirikishi vya UX.",
-        skills_backend: "Backend",
-        skills_backend_p: "Mifumo ya Node.js, Express, na Nest.js.",
-        skills_db: "Databases",
-        skills_db_p: "PostgreSQL, MongoDB, na MySQL.",
+        skills_frontend: "Frontend Awareness",
+        skills_frontend_p: "Kutumia React.js na Next.js kujenga suluhisho kamili (Full-stack).",
+        skills_js: "NestJS / Node.js",
+        skills_js_p: "Programu za kisasa za upande wa seva kwa kutumia TypeScript.",
+        skills_backend: "Backend Architecture",
+        skills_backend_p: "Kusanifu usanifu wa seva unaoweza kupanuka na salama.",
+        skills_db: "Hifadhidata (Databases)",
+        skills_db_p: "Ujuzi katika PostgreSQL, MongoDB, na MySQL ukiwa na Prisma/TypeORM.",
         skills_dsa: "Algorithms & DSA",
         skills_dsa_p: "Ujuzi mkubwa wa kutatua matatizo katika miundo ya data na algoriti, uliopatikana kupitia mafunzo ya A2SV.",
-        skills_git: "Git",
-        skills_git_p: "Udhibiti wa toleo na michakato ya DevOps.",
+        skills_git: "Git & GitHub",
+        skills_git_p: "Udhibiti wa toleo na michakato ya ushirikiano ya kitaalam.",
         projects_title: "Miradi ya Hivi Karibuni",
         projects_subtitle: "Kazi Yangu",
         proj1_title: "House of Fitness",
-        proj1_p: "Mfumo mpana wa usimamizi wa gym kwa ajili ya kufuatilia wanachama, vifaa, na kupanga ratiba za madarasa kwa ufanisi.",
+        proj1_p: "Mfumo mpana wa usimamizi wa gym kwa ajili ya kufuatilia wanachama na vifaa.",
         proj2_title: "Schedule Planner",
-        proj2_p: "Mfumo wa usimamizi wa majukumu unaosaidia watumiaji kupanga shughuli zao za kila siku na kupanga ratiba zao kwa ufanisi.",
+        proj2_p: "Mpangaji wa masomo mwenye akili kwa wanafunzi kupanga kazi zao.",
         proj3_title: "Big Data Injury Analysis",
-        proj3_p: "Mradi mkubwa wa uchambuzi wa data unaolenga kuchambua mifumo ya majeraha na kutoa maarifa kulingana na data.",
-        proj4_title: "Appointment System",
-        proj4_p: "Mfumo wa wavuti wa kuweka miadi na viongozi wa kampuni kwa ufanisi.",
-        proj5_title: "Umudugudu System",
-        proj5_p: "Kufuatilia wakazi na takwimu za watu kwa ajili ya viongozi wa mitaa kijijini.",
-        proj6_title: "School Database",
-        proj6_p: "Dhibiti kwa ufanisi data ya mwanafunzi, mwalimu, na kozi kwa wasimamizi.",
-        proj7_title: "Climate Detector",
-        proj7_p: "Hufuatilia data ya hali ya hewa na kutoa maarifa juu ya mabadiliko ya mazingira.",
-        proj8_title: "Home Budget Manager",
-        proj8_p: "Kusaidia watumiaji kudhibiti bajeti za nyumbani na kufuatilia gharama kwa ripoti za kina za picha.",
+        proj3_p: "Mradi wa uchambuzi wa data unaolenga mifumo ya majeraha ya viwandani.",
+        proj4_title: "PDTAS",
+        proj4_p: "Mfumo wa kufuatilia magonjwa ya wagonjwa ukizingatia uchambuzi wa data.",
+        proj8_title: "Finance Tracker",
+        proj8_p: "Zana ya kitaaluma ya kusimamia pesa na kufuatilia matumizi.",
+        proj_appointment_title: "AppointmentPro",
+        proj_appointment_p: "Mfumo wa utendaji wa juu wa kupanga mikutano ya uongozi.",
         proj9_title: "Portfolio Website",
         proj9_p: "Onyesho langu la kitaaluma lililojengwa kwa teknolojia ya kisasa ya CSS na JS.",
         vlogs_title: "Maisha kama Mhandisi",
@@ -284,7 +276,7 @@ const translations = {
         honors_subtitle: "Heshima na Tuzo",
         honor1_title: "Mtendaji Bora",
         honor1_desc: "Inatambulika kwa ubora katika utatuzi wa matatizo ya algoriti.",
-        honor2_title: "Orodha ya Dekani (Dean's List)",
+        honor2_title: "Dean's List",
         honor2_desc: "Ubora wa kitaaluma katika Software Engineering huko AUCA.",
         honor3_title: "Ubora wa A2SV",
         honor3_desc: "Maendeleo bora katika mpango wa mafunzo wa A2SV.",
@@ -314,14 +306,14 @@ const translations = {
         nav_skills: "Compétences",
         nav_projects: "Projets",
         nav_contact: "Contact",
-        hero_h1_span: "Construire",
-        hero_h1_text: "des Expériences Numériques.",
-        hero_desc: "Je suis Enock Humure, étudiant en génie logiciel à l'AUCA et stagiaire A2SV, créant des solutions numériques de haute performance.",
+        hero_h1_span: "Backend",
+        hero_h1_text: "Architecte Système.",
+        hero_desc: "Je suis Enock Humure, étudiant en génie logiciel à l'AUCA et stagiaire A2SV. Je me spécialise dans la construction de systèmes backend robustes avec Spring Boot et NestJS.",
         btn_cv: "TELECHARGER_CV",
         btn_work: "VOIR_TRAVAUX",
-        about_title: "Passion pour l'Innovation",
-        about_subtitle: "Un peu sur moi",
-        about_p: "Je suis un développeur de logiciels dédié et spécialisé dans le développement web. J'aime concevoir des applications fonctionnelles et conviviales tout en explorant continuellement de nouvelles technologies. Mon objectif est de fournir des solutions de haute qualité qui ont un impact significatif.",
+        about_title: "Spécialiste Backend",
+        about_subtitle: "À Propos",
+        about_p: "Je suis un ingénieur backend dédié avec un focus profond sur Spring Boot et NestJS. J'aime concevoir des API évolutives et optimiser les performances des bases de données.",
         edu_title: "Éducation",
         edu_subtitle: "Parcours Professionnel",
         edu_a2sv_title: "Stagiaire Africa to Silicon Valley",
@@ -330,44 +322,40 @@ const translations = {
         edu_auca_desc: "Adventist University of Central Africa (AUCA). Acquisition de bases solides en architecture système et développement.",
         skills_title: "Compétences Clés",
         skills_subtitle: "Stack Technique",
-        skills_java: "Programmation Java",
-        skills_java_p: "Systèmes backend évolutifs et applications d'entreprise.",
+        skills_java: "Spring Boot / Java",
+        skills_java_p: "Construction de microservices et d'API REST pour les systèmes d'entreprise.",
         skills_python: "Programmation Python",
         skills_python_p: "Développement de scripts, automatisation et outils d'analyse de données.",
         skills_linux: "Systèmes Linux",
         skills_linux_p: "Maîtrise des opérations de terminal, du shell scripting et de l'administration système.",
         skills_leetcode: "LeetCode / Problem Solving",
         skills_leetcode_p: "Pratique régulière des défis algorithmiques sur LeetCode.",
-        skills_frontend: "Développement Frontend",
-        skills_frontend_p: "Construction d'applications web performantes avec React.js, Next.js et React Native pour mobile.",
-        skills_js: "JavaScript",
-        skills_js_p: "Logique ES6+ moderne et composants UX interactifs.",
-        skills_backend: "Backend",
-        skills_backend_p: "Frameworks Node.js, Express et Nest.js.",
+        skills_frontend: "Frontend Awareness",
+        skills_frontend_p: "Utilisation de React.js et Next.js pour construire des solutions complètes (Full-stack).",
+        skills_js: "NestJS / Node.js",
+        skills_js_p: "Applications modernes côté serveur utilisant TypeScript.",
+        skills_backend: "Backend Architecture",
+        skills_backend_p: "Conception d'architectures de serveurs évolutives et sécurisées.",
         skills_db: "Bases de Données",
-        skills_db_p: "PostgreSQL, MongoDB et MySQL.",
+        skills_db_p: "Maîtrise de PostgreSQL, MongoDB et MySQL avec Prisma/TypeORM.",
         skills_dsa: "Algorithmes & DSA",
         skills_dsa_p: "Solides compétences en résolution de problèmes en structures de données et algorithmes, perfectionnées par la formation A2SV.",
-        skills_git: "Git",
-        skills_git_p: "Gestion de version et flux de travail DevOps.",
+        skills_git: "Git & GitHub",
+        skills_git_p: "Gestion de version et flux de travail collaboratifs professionnels.",
         projects_title: "Projets Récents",
         projects_subtitle: "Mon Travail",
         proj1_title: "House of Fitness",
-        proj1_p: "Un système complet de gestion de salle de sport pour le suivi des membres, de l'équipement et la planification des cours.",
+        proj1_p: "Un système complet de gestion de salle de sport pour le suivi des membres et de l'équipement.",
         proj2_title: "Schedule Planner",
-        proj2_p: "Un système de gestion de tâches qui aide les utilisateurs à organiser leurs activités quotidiennes et à planifier leur emploi du temps.",
-        proj3_title: "Analyse Big Data des Blessures",
-        proj3_p: "Un projet d'analyse de données à grande échelle axé sur l'analyse des schémas de blessures et la fourniture d'aperçus basés sur les données.",
-        proj4_title: "Système de Rendez-vous",
-        proj4_p: "Système web pour la prise de rendez-vous efficace avec les dirigeants d'entreprise.",
-        proj5_title: "Système Umudugudu",
-        proj5_p: "Suivi des résidents et des données démographiques pour les dirigeants locaux du village.",
-        proj6_title: "Base de Données Scolaire",
-        proj6_p: "Gérer efficacement les données des élèves, des enseignants et des cours pour les administrateurs.",
-        proj7_title: "Détecteur de Climat",
-        proj7_p: "Surveillance des données climatiques et fourniture d'aperçus sur les changements environnementaux.",
-        proj8_title: "Gestionnaire de Budget Domestique",
-        proj8_p: "Aider les utilisateurs à gérer leurs budgets domestiques et à suivre leurs dépenses avec des rapports visuels détaillés.",
+        proj2_p: "Un planificateur d'études intelligent pour aider les étudiants à organiser leurs tâches.",
+        proj3_title: "Analyse Big Data",
+        proj3_p: "Projet d'analyse de données à grande échelle axé sur la sécurité industrielle.",
+        proj4_title: "PDTAS",
+        proj4_p: "Système de suivi des maladies des patients axé sur l'analyse des données.",
+        proj8_title: "Finance Tracker",
+        proj8_p: "Outil professionnel de gestion d'argent pour suivre les dépenses et contrôler les finances.",
+        proj_appointment_title: "AppointmentPro",
+        proj_appointment_p: "Système haute performance pour la planification de réunions de direction.",
         proj9_title: "Site Web Portfolio",
         proj9_p: "Ma vitrine professionnelle personnelle construite avec du glassmorphisme CSS avancé et des animations JS.",
         vlogs_title: "La vie d'un ingénieur",
@@ -469,6 +457,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTheme(currentTheme);
 
+    // Custom Cursor Toggle Logic
+    const cursorToggle = document.getElementById('cursor-toggle');
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    let cursorEnabled = localStorage.getItem('cursorEnabled') !== 'false';
+
+    function updateCursorVisibility() {
+        if (cursorEnabled) {
+            cursorDot.style.display = 'block';
+            cursorRing.style.display = 'block';
+            cursorToggle.querySelector('i').classList.replace('fa-mouse', 'fa-mouse-pointer');
+            cursorToggle.style.color = 'var(--accent-blue)';
+        } else {
+            cursorDot.style.display = 'none';
+            cursorRing.style.display = 'none';
+            cursorToggle.querySelector('i').classList.replace('fa-mouse-pointer', 'fa-mouse');
+            cursorToggle.style.color = 'var(--text-secondary)';
+        }
+    }
+
+    cursorToggle.addEventListener('click', () => {
+        cursorEnabled = !cursorEnabled;
+        localStorage.setItem('cursorEnabled', cursorEnabled);
+        updateCursorVisibility();
+    });
+
+    updateCursorVisibility();
+
     // Profile Image Tilt Effect
     const tiltContainer = document.querySelector('.img-tilt-container');
     const imgLayer = document.querySelector('.img-layer');
@@ -534,6 +550,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateContent(currentLang);
 
+    // Skills Category Switching Logic
+    const skillTabBtns = document.querySelectorAll('.skill-tab-btn');
+    const skillContainers = document.querySelectorAll('.skills-container');
+
+    skillTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.getAttribute('data-category');
+
+            // Update button states
+            skillTabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update container visibility
+            skillContainers.forEach(container => {
+                if (container.id === `skills-${category}`) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        });
+    });
+
     // Project Modal Logic
     const projectModal = document.getElementById('project-modal');
     const projectDetails = document.getElementById('project-details');
@@ -550,80 +589,87 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Automated class scheduling",
                 "Payment history and billing integration"
             ],
-            tech: ["React", "Node.js", "Express", "MongoDB"],
-            link: "https://github.com/EnockHumure/House-of-Fitness"
+            tech: ["Spring Boot", "Java", "PostgreSQL", "React"],
+            link: "https://github.com/EnockHumure/House-of-Fitness",
+            live: null
         },
         proj2: {
             title: "Schedule Planner",
-            desc: "A productivity-focused task management system for efficient daily planning.",
+            desc: "A smart study planner built for students to organize tasks, manage deadlines, and receive intelligent daily study guidance.",
             features: [
                 "Interactive task calendar",
-                "Priority-based task sorting",
-                "Progress tracking and analytics",
-                "Cross-device synchronization"
+                "Deadline management and alerts",
+                "Intelligent study guidance system",
+                "Responsive student-focused UI"
             ],
-            tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
-            link: "https://github.com/EnockHumure/schedure-planner"
+            tech: ["NestJS", "TypeScript", "Next.js", "PostgreSQL"],
+            link: "https://github.com/EnockHumure/schedure-planner",
+            live: "https://gleeful-hotteok-975391.netlify.app/"
         },
         proj3: {
             title: "Big Data Injury Analysis",
-            desc: "Advanced data analysis project focused on industrial safety and injury prevention.",
+            desc: "Advanced data analysis project focused on industrial safety and injury prevention using large-scale datasets.",
             features: [
-                "Processing large-scale safety datasets",
-                "Identifying high-risk injury patterns",
-                "Visualizing safety trends over time",
-                "Generating data-driven prevention recommendations"
+                "Processing industrial safety datasets",
+                "Pattern recognition for injury causes",
+                "Data visualization and safety reporting",
+                "Predictive insights for risk mitigation"
             ],
-            tech: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook"],
-            link: "https://github.com/EnockHumure/bigdata-injury-analysis"
+            tech: ["Python", "Pandas", "Matplotlib", "Big Data"],
+            link: "https://github.com/EnockHumure/bigdata-injury-analysis",
+            live: null
         },
         proj4: {
             title: "PDTAS",
-            desc: "Patient Disease Tracking Analytics System for healthcare monitoring.",
+            desc: "Patient Disease Tracking Analytics System focused on secure medical data management and health analytics.",
             features: [
-                "Patient health record management",
-                "Disease outbreak pattern tracking",
-                "Secure database for sensitive medical data",
-                "Analytical reporting for healthcare providers"
+                "Patient health record tracking",
+                "Disease outbreak pattern analytics",
+                "Secure database architecture",
+                "Medical provider reporting tools"
             ],
-            tech: ["Database Management", "SQL", "Analytics", "Python"],
-            link: "https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-"
+            tech: ["Spring Boot", "MySQL", "Analytics", "Java"],
+            link: "https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-",
+            live: null
         },
         proj8: {
-            title: "Home Budget Manager",
-            desc: "A financial tracking tool for managing household expenses and savings.",
+            title: "Finance Tracker",
+            desc: "A professional financial management tool to track expenses, visualize spending patterns, and take control of personal finances.",
             features: [
-                "Expense categorization and tracking",
-                "Budget goal setting",
-                "Visual spending reports and charts",
-                "Recurring payment reminders"
+                "Real-time expense tracking",
+                "Smart analytics and spending insights",
+                "Data export and backup features",
+                "Intuitive money management dashboard"
             ],
-            tech: ["Python", "Data Analysis", "Finance API"],
-            link: "https://github.com/EnockHumure/personal_tracker_finances"
+            tech: ["Spring Boot", "React", "PostgreSQL", "Chart.js"],
+            link: "https://github.com/EnockHumure/personal_tracker_finances",
+            live: "https://incredible-croquembouche-inock8.netlify.app/"
         },
         proj_appointment: {
-            title: "Appointment System",
-            desc: "Streamlined booking system for professional appointments.",
+            title: "AppointmentPro",
+            desc: "A high-performance leader appointment system for scheduling meetings with company leadership efficiently.",
             features: [
-                "Real-time availability check",
-                "Automated email confirmations",
-                "Leader dashboard for schedule management",
-                "User-friendly booking interface"
+                "Streamlined leadership booking system",
+                "Secure and confidential meeting handling",
+                "Real-time availability management",
+                "Professional administration dashboard"
             ],
-            tech: ["Web Technologies", "JavaScript", "Backend API"],
-            link: "https://github.com/EnockHumure/appointment-system"
+            tech: ["NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+            link: "https://github.com/EnockHumure/appointment-system",
+            live: "https://flourishing-lolly-d1f9c4.netlify.app/"
         },
         proj9: {
             title: "Portfolio Website",
-            desc: "Personal professional showcase featuring advanced UI/UX principles.",
+            desc: "Personal professional showcase featuring advanced UI/UX principles and interactive hacker aesthetic.",
             features: [
                 "Custom glassmorphism design",
                 "Multilingual support (EN, RW, SW, FR)",
                 "Interactive terminal widget",
-                "Smooth scroll and reveal animations"
+                "Smooth scroll and toggleable animations"
             ],
             tech: ["JavaScript", "HTML5", "CSS3", "Animations"],
-            link: "https://github.com/EnockHumure/the-portfolio"
+            link: "https://github.com/EnockHumure/the-portfolio",
+            live: "https://enock-humure.netlify.app/"
         }
     };
 
@@ -633,6 +679,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = projectData[projId];
             
             if (data) {
+                let footerHtml = `<a href="${data.link}" target="_blank" class="btn-primary"><i class="fab fa-github"></i> Source Code</a>`;
+                if (data.live) {
+                    footerHtml += `<a href="${data.live}" target="_blank" class="btn-secondary" style="margin-left: 15px;"><i class="fas fa-external-link-alt"></i> Live Demo</a>`;
+                }
+
                 projectDetails.innerHTML = `
                     <h2 class="modal-title">${data.title}</h2>
                     <p class="modal-desc">${data.desc}</p>
@@ -651,7 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a href="${data.link}" target="_blank" class="btn-primary"><i class="fab fa-github"></i> Source Code</a>
+                        ${footerHtml}
                     </div>
                 `;
                 projectModal.style.display = 'block';

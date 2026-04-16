@@ -50,16 +50,12 @@ const translations = {
         proj2_p: "A task management system that helps users organize their daily activities and plan their schedules efficiently.",
         proj3_title: "Big Data Injury Analysis",
         proj3_p: "A large-scale data analysis project focused on analyzing injury patterns and providing data-driven insights for safety improvements.",
-        proj4_title: "Appointment System",
-        proj4_p: "Web-based system for booking appointments with company leaders efficiently.",
-        proj5_title: "Umudugudu System",
-        proj5_p: "Tracking residents and demographics for local leaders in the village.",
-        proj6_title: "School Database",
-        proj6_p: "Efficiently manage student, teacher, and course data for administrators.",
-        proj7_title: "Climate Detector",
-        proj7_p: "Monitors climate data and providing insights on environmental changes.",
+        proj4_title: "PDTAS",
+        proj4_p: "Patient Disease Tracking Analytics System focused on database management and tracking health analytics.",
         proj8_title: "Home Budget Manager",
         proj8_p: "Helping users manage household budgets and track expenses with detailed visual reports.",
+        proj_appointment_title: "Appointment System",
+        proj_appointment_p: "Web-based system for booking appointments with company leaders efficiently.",
         proj9_title: "Portfolio Website",
         proj9_p: "My professional personal showcase built with advanced CSS glassmorphism and JS animations.",
         vlogs_title: "Life as an Engineer",
@@ -70,8 +66,8 @@ const translations = {
         vlog2_desc: "Building solutions under pressure.",
         vlog3_title: "Team Collaboration",
         vlog3_desc: "Collective problem solving.",
-        vlog4_title: "Debugging Live",
-        vlog4_desc: "Deep diving into system bugs.",
+        vlog4_title: "Volunteer Work",
+        vlog4_desc: "Giving back to the community through technology.",
         vlog5_title: "Exploring New Tech",
         vlog5_desc: "Always learning.",
         vlog6_title: "Morning Routine",
@@ -174,8 +170,8 @@ const translations = {
         vlog2_desc: "Gukemura ibibazo ku muvuduko ukaze.",
         vlog3_title: "Gukorera mu Itsinda",
         vlog3_desc: "Gukemura ibibazo hamwe nk'itsinda.",
-        vlog4_title: "Gukosora Amakosa (Debugging)",
-        vlog4_desc: "Kwinjira mu miterere y'amakosa ya sisitemu.",
+        vlog4_title: "Ibikorwa by'Ubukorerabushake",
+        vlog4_desc: "Gufasha umuryango binyuze mu kigihangano cy'ikoranabuhanga.",
         vlog5_title: "Kwiga Ikoranabuhanga Rishya",
         vlog5_desc: "Guhora niga buri munsi.",
         vlog6_title: "Gahunda ya mu gitondo",
@@ -278,8 +274,8 @@ const translations = {
         vlog2_desc: "Kujenga suluhisho chini ya shinikizo.",
         vlog3_title: "Ushirikiano wa Timu",
         vlog3_desc: "Kutatua matatizo kwa pamoja.",
-        vlog4_title: "Kurekebisha Hitilafu (Debugging)",
-        vlog4_desc: "Kuingia kwa kina katika hitilafu za mfumo.",
+        vlog4_title: "Kazi ya Kujitolea",
+        vlog4_desc: "Kutoa msaada kwa jamii kupitia teknolojia.",
         vlog5_title: "Kuchunguza Teknolojia Mpya",
         vlog5_desc: "Kujifunza kila wakati.",
         vlog6_title: "Ratiba ya Asubuhi",
@@ -382,8 +378,8 @@ const translations = {
         vlog2_desc: "Construire des solutions sous pression.",
         vlog3_title: "Collaboration d'équipe",
         vlog3_desc: "Résolution collective de problèmes.",
-        vlog4_title: "Débogage en direct",
-        vlog4_desc: "Plongée profonde dans les bogues du système.",
+        vlog4_title: "Travail Bénévole",
+        vlog4_desc: "Aider la communauté grâce à la technologie.",
         vlog5_title: "Explorer de nouvelles technologies",
         vlog5_desc: "Toujours apprendre.",
         vlog6_title: "Routine matinale",
@@ -538,6 +534,146 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateContent(currentLang);
 
+    // Project Modal Logic
+    const projectModal = document.getElementById('project-modal');
+    const projectDetails = document.getElementById('project-details');
+    const closeProjectModal = document.querySelector('.close-project-modal');
+    const openProjectBtns = document.querySelectorAll('.open-project');
+
+    const projectData = {
+        proj1: {
+            title: "House of Fitness",
+            desc: "A comprehensive gym management system designed to streamline fitness center operations.",
+            features: [
+                "Member registration and subscription tracking",
+                "Equipment inventory management",
+                "Automated class scheduling",
+                "Payment history and billing integration"
+            ],
+            tech: ["React", "Node.js", "Express", "MongoDB"],
+            link: "https://github.com/EnockHumure/House-of-Fitness"
+        },
+        proj2: {
+            title: "Schedule Planner",
+            desc: "A productivity-focused task management system for efficient daily planning.",
+            features: [
+                "Interactive task calendar",
+                "Priority-based task sorting",
+                "Progress tracking and analytics",
+                "Cross-device synchronization"
+            ],
+            tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+            link: "https://github.com/EnockHumure/schedure-planner"
+        },
+        proj3: {
+            title: "Big Data Injury Analysis",
+            desc: "Advanced data analysis project focused on industrial safety and injury prevention.",
+            features: [
+                "Processing large-scale safety datasets",
+                "Identifying high-risk injury patterns",
+                "Visualizing safety trends over time",
+                "Generating data-driven prevention recommendations"
+            ],
+            tech: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook"],
+            link: "https://github.com/EnockHumure/bigdata-injury-analysis"
+        },
+        proj4: {
+            title: "PDTAS",
+            desc: "Patient Disease Tracking Analytics System for healthcare monitoring.",
+            features: [
+                "Patient health record management",
+                "Disease outbreak pattern tracking",
+                "Secure database for sensitive medical data",
+                "Analytical reporting for healthcare providers"
+            ],
+            tech: ["Database Management", "SQL", "Analytics", "Python"],
+            link: "https://github.com/EnockHumure/Patient-Disease-Tracking-Analytics-System-PDTAS-"
+        },
+        proj8: {
+            title: "Home Budget Manager",
+            desc: "A financial tracking tool for managing household expenses and savings.",
+            features: [
+                "Expense categorization and tracking",
+                "Budget goal setting",
+                "Visual spending reports and charts",
+                "Recurring payment reminders"
+            ],
+            tech: ["Python", "Data Analysis", "Finance API"],
+            link: "https://github.com/EnockHumure/personal_tracker_finances"
+        },
+        proj_appointment: {
+            title: "Appointment System",
+            desc: "Streamlined booking system for professional appointments.",
+            features: [
+                "Real-time availability check",
+                "Automated email confirmations",
+                "Leader dashboard for schedule management",
+                "User-friendly booking interface"
+            ],
+            tech: ["Web Technologies", "JavaScript", "Backend API"],
+            link: "https://github.com/EnockHumure/appointment-system"
+        },
+        proj9: {
+            title: "Portfolio Website",
+            desc: "Personal professional showcase featuring advanced UI/UX principles.",
+            features: [
+                "Custom glassmorphism design",
+                "Multilingual support (EN, RW, SW, FR)",
+                "Interactive terminal widget",
+                "Smooth scroll and reveal animations"
+            ],
+            tech: ["JavaScript", "HTML5", "CSS3", "Animations"],
+            link: "https://github.com/EnockHumure/the-portfolio"
+        }
+    };
+
+    openProjectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const projId = btn.getAttribute('data-project');
+            const data = projectData[projId];
+            
+            if (data) {
+                projectDetails.innerHTML = `
+                    <h2 class="modal-title">${data.title}</h2>
+                    <p class="modal-desc">${data.desc}</p>
+                    <div class="modal-info-grid">
+                        <div class="modal-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                ${data.features.map(f => `<li><i class="fas fa-check-circle"></i> ${f}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="modal-tech">
+                            <h3>Technologies</h3>
+                            <div class="tech-tags">
+                                ${data.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="${data.link}" target="_blank" class="btn-primary"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                `;
+                projectModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    if (closeProjectModal) {
+        closeProjectModal.addEventListener('click', () => {
+            projectModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+            projectModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
     // Terminal Blink Effect
     const blink = document.getElementById('cursor-blink');
     if (blink) {
@@ -619,19 +755,36 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
 
-            // Simulate Network Delay
-            setTimeout(() => {
-                // For demonstration, always succeed
-                contactForm.style.display = 'none';
-                formSuccess.style.display = 'block';
-                
-                // Reset button (though form is hidden)
+            // Send to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formError.innerText = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formError.innerText = "Oops! There was a problem submitting your form";
+                        }
+                        formError.style.display = 'block';
+                    })
+                }
+            }).catch(error => {
+                formError.innerText = "Oops! There was a problem submitting your form";
+                formError.style.display = 'block';
+            }).finally(() => {
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
-                
-                console.log('Form Submitted:', new FormData(contactForm));
-            }, 2000);
+            });
         });
     }
 

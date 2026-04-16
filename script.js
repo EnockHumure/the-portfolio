@@ -815,9 +815,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }).then(response => {
                 if (response.ok) {
-                    contactForm.style.display = 'none';
                     formSuccess.style.display = 'block';
+                    formError.style.display = 'none';
                     contactForm.reset();
+                    // Auto-hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.style.display = 'none';
+                    }, 5000);
                 } else {
                     response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {

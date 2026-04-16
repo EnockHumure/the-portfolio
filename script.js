@@ -747,39 +747,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }
 
-    // Video Modal Logic
-    const modal = document.getElementById('video-modal');
-    const modalVideo = document.getElementById('modal-video');
-    const closeModal = document.querySelector('.close-modal');
-    const vlogCards = document.querySelectorAll('.vlog-card[data-video]');
-
-    vlogCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const videoSrc = card.getAttribute('data-video');
-            modalVideo.src = videoSrc;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scroll
-        });
-    });
-
-    if (closeModal) {
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            modalVideo.pause();
-            modalVideo.src = '';
-            document.body.style.overflow = 'auto';
-        });
-    }
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            modalVideo.pause();
-            modalVideo.src = '';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
     // Simulated Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
@@ -926,7 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Guestbook Logic
+    // Guestbook Logic - Terminal Chat Style
     const guestbookForm = document.getElementById('guestbook-form');
     const commentsDisplay = document.getElementById('comments-display');
     const commentSuccess = document.getElementById('comment-success');
@@ -937,6 +904,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(guestbookForm);
             const name = formData.get('name');
             const comment = formData.get('comment');
+            const now = new Date();
+            const timeStr = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
 
             // Send to Formspree
             fetch(guestbookForm.action, {
@@ -947,13 +916,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     commentSuccess.style.display = 'block';
                     
-                    // Add to UI immediately (local simulation for public feel)
+                    // Add to UI immediately in terminal style
                     const newComment = document.createElement('div');
                     newComment.className = 'comment-item';
-                    newComment.style = 'margin-bottom: 15px; border-left: 2px solid var(--accent-blue); padding-left: 15px; animation: fadeIn 0.5s ease;';
+                    newComment.style = 'margin-bottom: 12px; animation: fadeIn 0.5s ease;';
                     newComment.innerHTML = `
-                        <p style="font-size: 13px; color: var(--text-primary); font-weight: 600;">${name}</p>
-                        <p style="font-size: 12px; color: var(--text-secondary);">${comment}</p>
+                        <span style="color: var(--accent-purple); font-size: 11px;">[${timeStr}] ${name}:</span>
+                        <span style="color: white; font-size: 12px; margin-left: 5px;">${comment}</span>
                     `;
                     commentsDisplay.prepend(newComment);
                     guestbookForm.reset();

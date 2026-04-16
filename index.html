@@ -319,76 +319,6 @@
         </div>
     </section>
 
-    <!-- Vlogs Section -->
-    <section class="vlogs" id="vlogs">
-        <div class="container">
-            <p class="section-subtitle" data-i18n="vlogs_subtitle">Vlogs & Journey</p>
-            <h2 class="section-title" data-i18n="vlogs_title">Life as an Engineer</h2>
-            
-            <div class="bento-grid">
-                <!-- Vlog 1: kLab Journey -->
-                <div class="bento-card span-2 vlog-card" data-video="enock travelling.mp4">
-                    <div class="vlog-media-container">
-                        <img src="day at klab.jpeg" alt="Day at kLab" class="vlog-img">
-                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog1_title">Tech Hub Journey</h3>
-                        <p data-i18n="vlog1_desc">Exploring innovation and community at Kigali's tech hubs.</p>
-                    </div>
-                </div>
-                <!-- Vlog 2: Coding & Vibes -->
-                <div class="bento-card vlog-card" data-video="enockvibing.mp4">
-                    <div class="vlog-media-container">
-                        <img src="coding hackthon.jpeg" alt="Coding Hackathon" class="vlog-img">
-                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog2_title">Coding & Innovation</h3>
-                        <p data-i18n="vlog2_desc">Building solutions and sharing the developer vibe.</p>
-                    </div>
-                </div>
-                <!-- Vlog 3: Motivation -->
-                <div class="bento-card vlog-card" data-video="motivationwords.mp4">
-                    <div class="vlog-media-container">
-                        <img src="team collaboration.jpeg" alt="Team Collaboration" class="vlog-img">
-                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog3_title">Engineering Mindset</h3>
-                        <p data-i18n="vlog3_desc">Motivational words on growth and team collaboration.</p>
-                    </div>
-                </div>
-                <!-- Vlog 4: Volunteer Work -->
-                <div class="bento-card vlog-card" data-video="volunter2videous.mp4">
-                    <div class="vlog-media-container">
-                        <img src="volunter1.jpeg" alt="Volunteer Work" class="vlog-img">
-                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog4_title">Volunteer Work</h3>
-                        <p data-i18n="vlog4_desc">Giving back to the community through technology.</p>
-                    </div>
-                </div>
-                <!-- Static Image Cards -->
-                <div class="bento-card vlog-card">
-                    <img src="exploring new languages.jpeg" alt="Exploring New Tech" class="vlog-img">
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog5_title">Exploring New Tech</h3>
-                        <p data-i18n="vlog5_desc">Always learning, always growing.</p>
-                    </div>
-                </div>
-                <div class="bento-card span-2 vlog-card">
-                    <img src="mornig routine.jpeg" alt="Morning Routine" class="vlog-img">
-                    <div class="vlog-content">
-                        <h3 data-i18n="vlog6_title">Morning Routine</h3>
-                        <p data-i18n="vlog6_desc">Starting the day with coffee and backend architecture.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Command Center / Visitors Section -->
     <section class="visitors" id="visitors">
         <div class="container">
@@ -402,36 +332,37 @@
                         <span class="terminal-title">GLOBAL_VISITOR_MONITOR</span>
                     </div>
                     <div style="text-align: center; padding: 40px 0;">
-                        <h1 id="global-counter" style="font-size: 84px; color: var(--accent-blue); font-family: 'JetBrains Mono', monospace; text-shadow: 0 0 30px rgba(0, 209, 255, 0.3);">000000</h1>
+                        <h1 id="global-counter" style="font-size: 84px; color: var(--accent-blue); font-family: 'JetBrains Mono', monospace; text-shadow: 0 0 30px rgba(0, 209, 255, 0.3);">001245</h1>
                         <p style="color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-top: 10px;">Total Verified Sessions</p>
                     </div>
                     <div class="modal-footer" style="justify-content: center; border: none;">
-                        <button class="btn-secondary" id="refresh-metrics"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                        <a href="visitors.html" class="btn-primary" id="launch-dash"><i class="fas fa-chart-line"></i> Launch Full Dashboard</a>
                     </div>
                 </div>
 
-                <!-- Guestbook / Comments -->
+                <!-- Guestbook / Terminal Chat -->
                 <div class="bento-card span-2">
-                    <h3 data-i18n="guestbook_title">System Guestbook</h3>
-                    <p data-i18n="guestbook_desc" style="margin-bottom: 25px;">Leave a public message or feedback on the portfolio system.</p>
+                    <h3 data-i18n="guestbook_title">Terminal Chat</h3>
+                    <p data-i18n="guestbook_desc" style="margin-bottom: 25px;">Post a message to the public system logs.</p>
                     
-                    <div id="comment-success" style="display: none; color: var(--accent-blue); margin-bottom: 15px; font-size: 14px;">Comment received! Thank you for your feedback.</div>
+                    <div id="comment-success" style="display: none; color: var(--accent-blue); margin-bottom: 15px; font-size: 14px;">[MESSAGE_ENCRYPTED_AND_SENT]</div>
 
-                    <form id="guestbook-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
-                        <input type="text" name="name" placeholder="Visitor Name" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%;">
-                        <textarea name="comment" rows="3" placeholder="Enter your comment..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%;"></textarea>
-                        <button type="submit" class="btn-primary full" id="comment-btn" style="width: 100%;">Post Comment</button>
-                    </form>
-                    
-                    <div class="recent-comments" style="margin-top: 30px; border-top: 1px solid var(--border-glass); padding-top: 20px;">
-                        <p style="font-size: 10px; color: var(--accent-purple); letter-spacing: 1px; margin-bottom: 15px;">RECENT_ACTIVITY</p>
+                    <div class="terminal-chat-window" style="background: rgba(0,0,0,0.3); border-radius: 10px; border: 1px solid var(--border-glass); padding: 15px; height: 250px; overflow-y: auto; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace;">
                         <div id="comments-display">
-                            <div class="comment-item" style="margin-bottom: 15px; border-left: 2px solid var(--accent-blue); padding-left: 15px;">
-                                <p style="font-size: 13px; color: var(--text-primary); font-weight: 600;">Guest_User_88</p>
-                                <p style="font-size: 12px; color: var(--text-secondary);">The hacker theme is amazing! Love the terminal widget.</p>
+                            <div class="comment-item" style="margin-bottom: 12px;">
+                                <span style="color: var(--accent-purple); font-size: 11px;">[14:22] Guest_88:</span>
+                                <span style="color: white; font-size: 12px; margin-left: 5px;">System design looks clean! 🚀</span>
                             </div>
                         </div>
                     </div>
+
+                    <form id="guestbook-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
+                        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;">
+                            <input type="text" name="name" placeholder="User" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 10px; border-radius: 8px; color: white; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+                            <input type="text" name="comment" placeholder="Type message..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 10px; border-radius: 8px; color: white; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+                        </div>
+                        <button type="submit" class="btn-secondary full" id="comment-btn" style="width: 100%; margin-top: 15px; padding: 10px; font-size: 12px;">SEND_PACKET <i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -499,16 +430,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Video Modal -->
-    <div id="video-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <video id="modal-video" controls autoplay>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
 
     <!-- Project Detail Modal -->
     <div id="project-modal" class="modal">

@@ -893,6 +893,94 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Real Visitor Counter Logic (using CountAPI)
+    const counterEl = document.getElementById('visit-counter');
+    const logsModal = document.getElementById('logs-modal');
+    const logsContent = document.getElementById('logs-content');
+    const closeLogsModal = document.querySelector('.close-logs-modal');
+
+    if (counterEl) {
+        // We use a public namespace for the portfolio
+        const namespace = "enock-humure-portfolio";
+        const key = "visits";
+        
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            .then(res => res.json())
+            .then(data => {
+                const count = data.value || 0;
+                animateCounter(count);
+            })
+            .catch(() => {
+                // Fallback if API fails
+                let visits = parseInt(localStorage.getItem('portfolio_visits') || '1024');
+                visits++;
+                localStorage.setItem('portfolio_visits', visits);
+                animateCounter(visits);
+            });
+    }
+
+    function animateCounter(target) {
+        let currentDisplay = 0;
+        const duration = 2000;
+        const timer = setInterval(() => {
+            currentDisplay += Math.ceil(target / 50);
+            if (currentDisplay >= target) {
+                counterEl.innerText = target.toString().padStart(6, '0');
+                clearInterval(timer);
+            } else {
+                counterEl.innerText = currentDisplay.toString().padStart(6, '0');
+            }
+        }, 30);
+    }
+
+    // System Logs Logic
+    if (counterEl) {
+        counterEl.addEventListener('click', () => {
+            logsModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            logsContent.innerHTML = '<p class="prompt">[ACCESSING_CORE_DATABASES...]</p>';
+
+            // Fetch visitor info
+            fetch('https://ipapi.co/json/')
+                .then(res => res.json())
+                .then(data => {
+                    setTimeout(() => {
+                        logsContent.innerHTML = `
+                            <p class="prompt">>> ACCESS_GRANTED</p>
+                            <p style="color: #00FF88; margin-top: 10px;">[CURRENT_SESSION_DATA]</p>
+                            <p>IP_ADDRESS: ${data.ip || 'HIDDEN'}</p>
+                            <p>LOCATION: ${data.city}, ${data.country_name}</p>
+                            <p>PROVIDER: ${data.org || 'UNKNOWN'}</p>
+                            <p>LAT_LONG: ${data.latitude}, ${data.longitude}</p>
+                            <p>TIMEZONE: ${data.timezone}</p>
+                            <p style="color: #00FF88; margin-top: 10px;">[DEVICE_METRICS]</p>
+                            <p>USER_AGENT: ${navigator.userAgent.substring(0, 50)}...</p>
+                            <p>PLATFORM: ${navigator.platform}</p>
+                            <p>LANGUAGE: ${navigator.language}</p>
+                            <p style="color: var(--accent-blue); margin-top: 15px;">>> SYSTEM_STATUS: MONITORING_ACTIVE</p>
+                        `;
+                    }, 800);
+                })
+                .catch(() => {
+                    logsContent.innerHTML = '<p style="color: #FF4D4D;">>> ERROR: ENCRYPTION_LAYER_BLOCKED_REQUEST</p>';
+                });
+        });
+    }
+
+    if (closeLogsModal) {
+        closeLogsModal.addEventListener('click', () => {
+            logsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === logsModal) {
+            logsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 });
 
 const revealStyle = document.createElement('style');

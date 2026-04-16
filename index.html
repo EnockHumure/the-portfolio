@@ -91,7 +91,7 @@
                             <p><span class="prompt">enock@kali:~$</span> location</p>
                             <p class="term-out">Kigali, Rwanda</p>
                             <p><span class="prompt">enock@kali:~$</span> visitors_count</p>
-                            <p class="term-out" id="visit-counter">000000</p>
+                            <p class="term-out" id="visit-counter" style="cursor: pointer; text-decoration: underline;" title="Click to view access logs">000000</p>
                             <p><span class="prompt">enock@kali:~$</span> <span id="cursor-blink">_</span></p>
                         </div>
                     </div>
@@ -99,6 +99,19 @@
             </div>
         </div>
     </section>
+
+    <!-- System Logs Modal -->
+    <div id="logs-modal" class="modal">
+        <div class="modal-content project-modal-content">
+            <span class="close-logs-modal close-modal">&times;</span>
+            <div class="project-details-body">
+                <h2 class="modal-title">SYSTEM_ACCESS_LOGS</h2>
+                <div id="logs-content" class="terminal-body" style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+                    <p class="prompt">[FETCHING_REMOTE_DATA...]</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section class="about" id="about">

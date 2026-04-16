@@ -19,7 +19,7 @@ const translations = {
         edu_a2sv_title: "Africa to Silicon Valley Trainee",
         edu_a2sv_desc: "Intensive training in advanced data structures, algorithms, and high-performance software engineering principles.",
         edu_auca_title: "Software Engineering Undergraduate",
-        edu_auca_desc: "Adventist University of Central Africa. Building core foundations in system architecture and development.",
+        edu_auca_desc: "Adventist University of Central Africa (Kigali). Building core foundations in system architecture and development.",
         skills_title: "Core Competencies",
         skills_subtitle: "Tech Stack",
         skills_java: "Spring Boot / Java",
@@ -58,28 +58,27 @@ const translations = {
         proj_appointment_p: "A high-performance system for scheduling leadership meetings and consultations efficiently.",
         proj9_title: "Portfolio Website",
         proj9_p: "My professional personal showcase built with advanced CSS glassmorphism and JS animations.",
+        nav_visitors: "Visitors",
+        visitors_title: "Command Center",
+        visitors_subtitle: "Live Metrics",
+        guestbook_title: "System Guestbook",
+        guestbook_desc: "Leave a public message or feedback on the portfolio system.",
         vlogs_title: "Life as an Engineer",
         vlogs_subtitle: "Vlogs & Journey",
         vlog1_title: "Day at kLab",
-        vlog1_desc: "Innovation and community at Kigali's tech hub.",
-        vlog2_title: "Coding Hackathon",
-        vlog2_desc: "Building solutions under pressure.",
-        vlog3_title: "Team Collaboration",
-        vlog3_desc: "Collective problem solving.",
+        vlog1_desc: "Exploring innovation and community at Kigali's tech hub.",
+        vlog2_title: "Vibing/Coding",
+        vlog2_desc: "Building solutions and sharing the developer vibe.",
+        vlog3_title: "Motivation/Team",
+        vlog3_desc: "Motivational words on growth and team collaboration.",
         vlog4_title: "Volunteer Work",
         vlog4_desc: "Giving back to the community through technology.",
         vlog5_title: "Exploring New Tech",
-        vlog5_desc: "Always learning.",
+        vlog5_desc: "Always learning, always growing.",
         vlog6_title: "Morning Routine",
-        vlog6_desc: "Starting the day with coffee and code.",
+        vlog6_desc: "Starting the day with coffee and backend architecture.",
         honors_title: "Achievements",
         honors_subtitle: "Honors & Awards",
-        honor1_title: "Top Performer",
-        honor1_desc: "Recognized for excellence in algorithmic problem solving.",
-        honor2_title: "Dean's List",
-        honor2_desc: "Academic excellence at AUCA Software Engineering.",
-        honor3_title: "A2SV Excellence",
-        honor3_desc: "Outstanding progress in the A2SV training program.",
         honor4_title: "AI & Machine Learning",
         honor4_desc: "Certified expertise in developing intelligent systems and data models.",
         honor5_title: "Professional Communication",
@@ -158,6 +157,11 @@ const translations = {
         proj_appointment_p: "Sisitemu yo gufata gahunda yo guhura n'abayobozi neza kandi vuba.",
         proj9_title: "Portfolio Website",
         proj9_p: "Urubuga rwanjye rwerekana imishinga n'ubuhanga bwanjye, rukozwe n'ikoranabuhanga rigezweho.",
+        nav_visitors: "Abasuye",
+        visitors_title: "Ibiro Bikuru",
+        visitors_subtitle: "Imibare Live",
+        guestbook_title: "Igitabo cy'Abashyitsi",
+        guestbook_desc: "Siga ubutumwa cyangwa igitekerezo kuri sisitemu.",
         vlogs_title: "Ubuzima bw'Umuhanga mu by'Ikoranabuhanga",
         vlogs_subtitle: "Amashusho n'Urugendo",
         vlog1_title: "Umunsi muri kLab",
@@ -258,6 +262,11 @@ const translations = {
         proj_appointment_p: "Mfumo wa utendaji wa juu wa kupanga mikutano ya uongozi.",
         proj9_title: "Portfolio Website",
         proj9_p: "Onyesho langu la kitaaluma lililojengwa kwa teknolojia ya kisasa ya CSS na JS.",
+        nav_visitors: "Wageni",
+        visitors_title: "Kituo cha Amri",
+        visitors_subtitle: "Vipimo vya Moja kwa Moja",
+        guestbook_title: "Kitabu cha Wageni",
+        guestbook_desc: "Acha ujumbe wa hadharani au maoni kwenye mfumo.",
         vlogs_title: "Maisha kama Mhandisi",
         vlogs_subtitle: "Vlog na Safari",
         vlog1_title: "Siku katika kLab",
@@ -358,6 +367,11 @@ const translations = {
         proj_appointment_p: "Système haute performance pour la planification de réunions de direction.",
         proj9_title: "Site Web Portfolio",
         proj9_p: "Ma vitrine professionnelle personnelle construite avec du glassmorphisme CSS avancé et des animations JS.",
+        nav_visitors: "Visiteurs",
+        visitors_title: "Centre de Commande",
+        visitors_subtitle: "Métriques en Direct",
+        guestbook_title: "Livre d'Or",
+        guestbook_desc: "Laissez un message public ou un commentaire sur le système.",
         vlogs_title: "La vie d'un ingénieur",
         vlogs_subtitle: "Vlogs et voyage",
         vlog1_title: "Journée à kLab",
@@ -870,44 +884,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Real Visitor Counter Logic (using CounterAPI.dev - More stable)
-    const counterEl = document.getElementById('visit-counter');
-    const logsModal = document.getElementById('logs-modal');
-    const logsContent = document.getElementById('logs-content');
-    const closeLogsModal = document.querySelector('.close-logs-modal');
+    // Global Visitor Counter Sync
+    const globalCounterEl = document.getElementById('global-counter');
+    const refreshBtn = document.getElementById('refresh-metrics');
 
-    if (counterEl) {
-        // We use counterapi.dev which is more reliable
-        fetch('https://api.counterapi.dev/v1/enock-humure-portfolio/visits/up')
-            .then(res => res.json())
-            .then(data => {
-                const count = data.count || 1240; // Default if first time
-                animateCounter(count);
-            })
-            .catch(() => {
-                // Reliable Fallback: Base count + random daily growth
-                const baseVisits = 1240;
-                const startDate = new Date('2024-01-01').getTime();
-                const now = new Date().getTime();
-                const daysPassed = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
-                const estimatedVisits = baseVisits + (daysPassed * 5) + Math.floor(Math.random() * 5);
-                
-                animateCounter(estimatedVisits);
-            });
+    function syncCounters(count) {
+        if (counterEl) animateCounter(counterEl, count);
+        if (globalCounterEl) animateCounter(globalCounterEl, count);
     }
 
-    function animateCounter(target) {
+    function animateCounter(el, target) {
         let currentDisplay = 0;
         const duration = 2000;
         const timer = setInterval(() => {
             currentDisplay += Math.ceil(target / 50);
             if (currentDisplay >= target) {
-                counterEl.innerText = target.toString().padStart(6, '0');
+                el.innerText = target.toString().padStart(6, '0');
                 clearInterval(timer);
             } else {
-                counterEl.innerText = currentDisplay.toString().padStart(6, '0');
+                el.innerText = currentDisplay.toString().padStart(6, '0');
             }
         }, 30);
+    }
+
+    if (counterEl || globalCounterEl) {
+        fetch('https://api.counterapi.dev/v1/enock-humure-portfolio/visits/up')
+            .then(res => res.json())
+            .then(data => syncCounters(data.count || 1240))
+            .catch(() => syncCounters(1245)); // Fallback
+    }
+
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+            refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SYNCING...';
+            fetch('https://api.counterapi.dev/v1/enock-humure-portfolio/visits')
+                .then(res => res.json())
+                .then(data => {
+                    syncCounters(data.count || 1240);
+                    setTimeout(() => refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Data', 1000);
+                });
+        });
+    }
+
+    // Guestbook Logic
+    const guestbookForm = document.getElementById('guestbook-form');
+    const commentsDisplay = document.getElementById('comments-display');
+    const commentSuccess = document.getElementById('comment-success');
+
+    if (guestbookForm) {
+        guestbookForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(guestbookForm);
+            const name = formData.get('name');
+            const comment = formData.get('comment');
+
+            // Send to Formspree
+            fetch(guestbookForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    commentSuccess.style.display = 'block';
+                    
+                    // Add to UI immediately (local simulation for public feel)
+                    const newComment = document.createElement('div');
+                    newComment.className = 'comment-item';
+                    newComment.style = 'margin-bottom: 15px; border-left: 2px solid var(--accent-blue); padding-left: 15px; animation: fadeIn 0.5s ease;';
+                    newComment.innerHTML = `
+                        <p style="font-size: 13px; color: var(--text-primary); font-weight: 600;">${name}</p>
+                        <p style="font-size: 12px; color: var(--text-secondary);">${comment}</p>
+                    `;
+                    commentsDisplay.prepend(newComment);
+                    guestbookForm.reset();
+                    setTimeout(() => commentSuccess.style.display = 'none', 5000);
+                }
+            });
+        });
     }
 
     // System Logs Logic

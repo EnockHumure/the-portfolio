@@ -33,6 +33,7 @@
                     <li><a href="#education" data-i18n="nav_education">Education</a></li>
                     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
                     <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li><a href="#visitors" data-i18n="nav_visitors">Visitors</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="nav-controls">
@@ -388,6 +389,54 @@
         </div>
     </section>
 
+    <!-- Command Center / Visitors Section -->
+    <section class="visitors" id="visitors">
+        <div class="container">
+            <p class="section-subtitle" data-i18n="visitors_subtitle">Live Metrics</p>
+            <h2 class="section-title" data-i18n="visitors_title">Command Center</h2>
+
+            <div class="bento-grid">
+                <!-- Live Monitor -->
+                <div class="bento-card span-2">
+                    <div class="terminal-header" style="margin-bottom: 20px;">
+                        <span class="terminal-title">GLOBAL_VISITOR_MONITOR</span>
+                    </div>
+                    <div style="text-align: center; padding: 40px 0;">
+                        <h1 id="global-counter" style="font-size: 84px; color: var(--accent-blue); font-family: 'JetBrains Mono', monospace; text-shadow: 0 0 30px rgba(0, 209, 255, 0.3);">000000</h1>
+                        <p style="color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-top: 10px;">Total Verified Sessions</p>
+                    </div>
+                    <div class="modal-footer" style="justify-content: center; border: none;">
+                        <button class="btn-secondary" id="refresh-metrics"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                    </div>
+                </div>
+
+                <!-- Guestbook / Comments -->
+                <div class="bento-card span-2">
+                    <h3 data-i18n="guestbook_title">System Guestbook</h3>
+                    <p data-i18n="guestbook_desc" style="margin-bottom: 25px;">Leave a public message or feedback on the portfolio system.</p>
+                    
+                    <div id="comment-success" style="display: none; color: var(--accent-blue); margin-bottom: 15px; font-size: 14px;">Comment received! Thank you for your feedback.</div>
+
+                    <form id="guestbook-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
+                        <input type="text" name="name" placeholder="Visitor Name" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%;">
+                        <textarea name="comment" rows="3" placeholder="Enter your comment..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%;"></textarea>
+                        <button type="submit" class="btn-primary full" id="comment-btn" style="width: 100%;">Post Comment</button>
+                    </form>
+                    
+                    <div class="recent-comments" style="margin-top: 30px; border-top: 1px solid var(--border-glass); padding-top: 20px;">
+                        <p style="font-size: 10px; color: var(--accent-purple); letter-spacing: 1px; margin-bottom: 15px;">RECENT_ACTIVITY</p>
+                        <div id="comments-display">
+                            <div class="comment-item" style="margin-bottom: 15px; border-left: 2px solid var(--accent-blue); padding-left: 15px;">
+                                <p style="font-size: 13px; color: var(--text-primary); font-weight: 600;">Guest_User_88</p>
+                                <p style="font-size: 12px; color: var(--text-secondary);">The hacker theme is amazing! Love the terminal widget.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Honors Section -->
     <section class="honors" id="honors">
         <div class="container">
@@ -395,21 +444,6 @@
             <h2 class="section-title" data-i18n="honors_title">Achievements</h2>
             
             <div class="bento-grid">
-                <div class="bento-card span-2">
-                    <i class="fas fa-trophy card-icon" style="color: #FFD700;"></i>
-                    <h3 data-i18n="honor1_title">Top Performer</h3>
-                    <p data-i18n="honor1_desc">Recognized for excellence in algorithmic problem solving.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fas fa-certificate card-icon" style="color: var(--accent-blue);"></i>
-                    <h3 data-i18n="honor2_title">Dean's List</h3>
-                    <p data-i18n="honor2_desc">Academic excellence at AUCA Software Engineering.</p>
-                </div>
-                <div class="bento-card">
-                    <i class="fas fa-award card-icon" style="color: var(--accent-purple);"></i>
-                    <h3 data-i18n="honor3_title">A2SV Excellence</h3>
-                    <p data-i18n="honor3_desc">Outstanding progress in the A2SV training program.</p>
-                </div>
                 <div class="bento-card span-2">
                     <i class="fas fa-brain card-icon" style="color: #00FF88;"></i>
                     <h3 data-i18n="honor4_title">AI & Machine Learning</h3>

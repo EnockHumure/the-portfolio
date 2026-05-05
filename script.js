@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
     en: {
         nav_home: "Home",
         nav_about: "About",
@@ -11,6 +11,7 @@ const translations = {
         hero_desc: "I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee. I specialize in building robust backend systems with Spring Boot, NestJS, and cloud technologies.",
         btn_cv: "DOWNLOAD_CV",
         btn_work: "VIEW_WORK",
+        review_project: "Review Project",
         about_title: "Backend Specialist",
         about_subtitle: "About Me",
         about_p: "I am a dedicated Backend Engineer with a deep focus on Spring Boot and NestJS. I thrive on architecting scalable APIs, optimizing database performance, and building secure, high-availability systems. My goal is to build the invisible engines that power modern digital experiences.",
@@ -87,16 +88,24 @@ const translations = {
         contact_subtitle: "Get in Touch",
         contact_h2_span: "amazing",
         contact_h2_text: "Let's build something",
-        contact_email: "EMAIL",
-        contact_tel: "TEL",
-        contact_loc: "LOC",
+        contact_email: "E-MAIL",
+        contact_tel: "CALL",
+        contact_loc: "PLACE",
         form_fn: "First Name",
         form_ln: "Last Name",
         form_em: "Email Address",
-        form_msg: "Message Payload",
-        form_btn: "Send Packet",
+        form_msg: "Message",
+        form_btn: "Send Message",
+        form_success: "Message sent successfully! Enock will get back to you soon.",
+        form_error: "Oops! There was a problem sending your message.",
+        cv_modal_title: "Download CV",
+        cv_modal_copy: "Please enter your email before downloading CV.",
+        cv_modal_placeholder: "Enter your email",
+        cv_modal_submit: "Continue to Download",
+        cv_form_success: "Thanks. Your download is starting now.",
+        cv_form_error: "I could not start the download. Please try again.",
         view_cert: "View Certificate",
-        footer_copy: "© 2026"
+        footer_copy: "Copyright © 2026"
     },
     rw: {
         nav_home: "Ahabanza",
@@ -110,6 +119,7 @@ const translations = {
         hero_desc: "Ndi Enock Humure, umunyeshuri wiga Software Engineering muri AUCA n'umuhanga utozwa muri A2SV. Mwibanda ku gukora sisitemu zikomeye (Backend) nkoresheje Spring Boot, NestJS, n'ikoranabuhanga rya cloud.",
         btn_cv: "KURAMO_CV",
         btn_work: "REBA_AKAZI",
+        review_project: "Reba Umushinga",
         about_title: "Umuhanga muri Backend",
         about_subtitle: "Ibijyanye nanjye",
         about_p: "Ndi umuhanga muri Backend wibanda cyane kuri Spring Boot na NestJS. Nkunda gukora imishinga ikomeye, itubura ry'ububiko bw'inyandiko (database), no gukora sisitemu zitekanye kandi zikora neza cyane.",
@@ -200,8 +210,16 @@ const translations = {
         form_em: "Imeyili yawe",
         form_msg: "Ubutumwa bwawe",
         form_btn: "Ohereza Ubutumwa",
+        form_success: "Ubutumwa bwoherejwe neza. Enock azagusubiza vuba.",
+        form_error: "Habaye ikibazo mu kohereza ubutumwa bwawe.",
+        cv_modal_title: "Kuramo CV",
+        cv_modal_copy: "Andika imeyili yawe mbere yo gukuramo CV.",
+        cv_modal_placeholder: "Andika imeyili yawe",
+        cv_modal_submit: "Komeza Ukuramo",
+        cv_form_success: "Murakoze. Gukuramo biri gutangira.",
+        cv_form_error: "Ntibyakunze gutangira gukuramo. Ongera ugerageze.",
         view_cert: "Reba Impamyabumenyi",
-        footer_copy: "© 2026"
+        footer_copy: "Copyright © 2026"
     },
     sw: {
         nav_home: "Mwanzo",
@@ -215,6 +233,7 @@ const translations = {
         hero_desc: "Mimi ni Enock Humure, mwanafunzi wa Software Engineering katika AUCA na mwanafunzi wa A2SV. Nimebobea katika kujenga mifumo thabiti ya backend kwa kutumia Spring Boot na NestJS.",
         btn_cv: "PAKUA_CV",
         btn_work: "TAZAMA_KAZI",
+        review_project: "Kagua Mradi",
         about_title: "Mtaalamu wa Backend",
         about_subtitle: "Kuhusu Mimi",
         about_p: "Mimi ni Mhandisi wa Backend aliyejitolea kwa kuzingatia sana Spring Boot na NestJS. Ninapenda kuunda APIs zinazoweza kupanuka na kuboresha utendaji wa hifadhidata.",
@@ -304,114 +323,131 @@ const translations = {
         form_ln: "Jina la Mwisho",
         form_em: "Anwani ya Barua Pepe",
         form_msg: "Ujumbe",
-        form_btn: "Tuma Paketi",
+        form_btn: "Tuma Ujumbe",
+        form_success: "Ujumbe umetumwa vizuri. Enock atakujibu hivi karibuni.",
+        form_error: "Kulikuwa na tatizo kutuma ujumbe wako.",
+        cv_modal_title: "Pakua CV",
+        cv_modal_copy: "Tafadhali ingiza barua pepe yako kabla ya kupakua CV.",
+        cv_modal_placeholder: "Ingiza barua pepe yako",
+        cv_modal_submit: "Endelea Kupakua",
+        cv_form_success: "Asante. Upakuaji wako unaanza sasa.",
+        cv_form_error: "Imeshindikana kuanza upakuaji. Tafadhali jaribu tena.",
         view_cert: "Angalia Cheti",
-        footer_copy: "© 2026"
+        footer_copy: "Copyright © 2026"
     },
     fr: {
         nav_home: "Accueil",
-        nav_about: "À Propos",
+        nav_about: "À propos",
         nav_education: "Éducation",
         nav_skills: "Compétences",
         nav_projects: "Projets",
         nav_contact: "Contact",
         hero_h1_span: "Backend",
         hero_h1_text: "Architecte Système.",
-        hero_desc: "Je suis Enock Humure, étudiant en génie logiciel à l'AUCA et stagiaire A2SV. Je me spécialise dans la construction de systèmes backend robustes avec Spring Boot et NestJS.",
+        hero_desc: "Je suis Enock Humure, étudiant en génie logiciel à l'AUCA et stagiaire A2SV. Je me spécialise dans la construction de systèmes backend robustes avec Spring Boot, NestJS et les technologies cloud.",
         btn_cv: "TELECHARGER_CV",
-        btn_work: "VOIR_TRAVAUX",
+        btn_work: "VOIR_TRAVAIL",
+        review_project: "Voir le projet",
         about_title: "Spécialiste Backend",
-        about_subtitle: "À Propos",
-        about_p: "Je suis un ingénieur backend dédié avec un focus profond sur Spring Boot et NestJS. J'aime concevoir des API évolutives et optimiser les performances des bases de données.",
+        about_subtitle: "À propos",
+        about_p: "Je suis un ingénieur backend dédié, avec une forte spécialisation en Spring Boot et NestJS. J'aime concevoir des API évolutives, optimiser les performances des bases de données et construire des systèmes sûrs et fiables.",
         edu_title: "Éducation",
-        edu_subtitle: "Parcours Professionnel",
+        edu_subtitle: "Parcours",
         edu_a2sv_title: "Stagiaire Africa to Silicon Valley",
-        edu_a2sv_desc: "Formation intensive en structures de données avancées, algorithmes et principes de génie logiciel de haute performance.",
-        edu_auca_title: "Étudiant en Génie Logiciel",
-        edu_auca_desc: "Adventist University of Central Africa (AUCA). Acquisition de bases solides en architecture système et développement.",
-        skills_title: "Compétences Clés",
-        skills_subtitle: "Stack Technique",
+        edu_a2sv_desc: "Formation intensive en structures de données avancées, algorithmes et principes d'ingénierie logicielle haute performance.",
+        edu_auca_title: "Étudiant en génie logiciel",
+        edu_auca_desc: "Adventist University of Central Africa (AUCA). Construction de bases solides en architecture système et développement.",
+        skills_title: "Compétences clés",
+        skills_subtitle: "Stack technique",
         skills_java: "Spring Boot / Java",
-        skills_java_p: "Construction de microservices et d'API REST pour les systèmes d'entreprise.",
+        skills_java_p: "Construction de microservices, d'API REST et de systèmes backend de niveau entreprise.",
         skills_python: "Programmation Python",
         skills_python_p: "Développement de scripts, automatisation et outils d'analyse de données.",
         skills_linux: "Systèmes Linux",
-        skills_linux_p: "Maîtrise des opérations de terminal, du shell scripting et de l'administration système.",
-        skills_leetcode: "LeetCode / Problem Solving",
-        skills_leetcode_p: "Pratique régulière des défis algorithmiques sur LeetCode.",
-        skills_frontend: "Frontend Awareness",
-        skills_frontend_p: "Utilisation de React.js et Next.js pour construire des solutions complètes (Full-stack).",
+        skills_linux_p: "Maîtrise du terminal, du shell scripting et de l'administration système.",
+        skills_leetcode: "LeetCode / Résolution de problèmes",
+        skills_leetcode_p: "Pratique régulière des défis algorithmiques et des structures de données.",
+        skills_frontend: "Culture Frontend",
+        skills_frontend_p: "Utilisation de React.js et Next.js pour construire des solutions full-stack cohérentes.",
         skills_js: "NestJS / Node.js",
-        skills_js_p: "Applications modernes côté serveur utilisant TypeScript.",
-        skills_backend: "Backend Architecture",
-        skills_backend_p: "Conception d'architectures de serveurs évolutives et sécurisées.",
-        skills_db: "Bases de Données",
-        skills_db_p: "Maîtrise de PostgreSQL, MongoDB et MySQL avec Prisma/TypeORM.",
+        skills_js_p: "Applications serveur modernes et évolutives avec TypeScript et l'écosystème Node.",
+        skills_backend: "Architecture Backend",
+        skills_backend_p: "Conception d'architectures serveur évolutives, sûres et performantes.",
+        skills_db: "Bases de données & ORM",
+        skills_db_p: "Maîtrise de PostgreSQL, MongoDB et MySQL avec Prisma et TypeORM.",
         skills_dsa: "Algorithmes & DSA",
-        skills_dsa_p: "Solides compétences en résolution de problèmes en structures de données et algorithmes, perfectionnées par la formation A2SV.",
+        skills_dsa_p: "Solides compétences en résolution de problèmes, structures de données et algorithmes, renforcées par la formation A2SV.",
         skills_git: "Git & GitHub",
-        skills_git_p: "Gestion de version et flux de travail collaboratifs professionnels.",
-        projects_title: "Projets Récents",
-        projects_subtitle: "Mon Travail",
+        skills_git_p: "Gestion de version professionnelle, branches, pull requests et collaboration.",
+        projects_title: "Projets récents",
+        projects_subtitle: "Mon travail",
         proj1_title: "House of Fitness",
-        proj1_p: "Un système complet de gestion de salle de sport pour le suivi des membres et de l'équipement.",
+        proj1_p: "Un système complet de gestion de salle de sport pour suivre les membres, l'équipement et les cours efficacement.",
         proj2_title: "Schedule Planner",
-        proj2_p: "Un planificateur d'études intelligent pour aider les étudiants à organiser leurs tâches.",
-        proj3_title: "Analyse Big Data",
-        proj3_p: "Projet d'analyse de données à grande échelle axé sur la sécurité industrielle.",
+        proj2_p: "Un planificateur d'études intelligent pour aider les étudiants à organiser leurs tâches, gérer les échéances et recevoir un accompagnement quotidien.",
+        proj3_title: "Analyse Big Data des blessures",
+        proj3_p: "Projet d'analyse de données à grande échelle axé sur les blessures et les recommandations basées sur les données.",
         proj4_title: "PDTAS",
-        proj4_p: "Système de suivi des maladies des patients axé sur l'analyse des données.",
+        proj4_p: "Système d'analyse et de suivi des maladies des patients, centré sur la gestion des données et les analyses de santé.",
         proj8_title: "Finance Tracker",
-        proj8_p: "Outil professionnel de gestion d'argent pour suivre les dépenses et contrôler les finances.",
+        proj8_p: "Un outil professionnel de gestion financière pour suivre les dépenses, visualiser les habitudes de consommation et garder le contrôle.",
         proj_appointment_title: "AppointmentPro",
-        proj_appointment_p: "Système haute performance pour la planification de réunions de direction.",
-        proj9_title: "Site Web Portfolio",
-        proj9_p: "Ma vitrine professionnelle personnelle construite avec du glassmorphisme CSS avancé et des animations JS.",
+        proj_appointment_p: "Système performant pour planifier efficacement des rendez-vous avec les responsables d'entreprise.",
+        proj9_title: "Site portfolio",
+        proj9_p: "Ma vitrine professionnelle personnelle, construite avec un glassmorphism CSS avancé et des animations JavaScript.",
         nav_visitors: "Visiteurs",
-        visitors_title: "Centre de Commande",
-        visitors_subtitle: "Métriques en Direct",
-        guestbook_title: "Livre d'Or",
-        guestbook_desc: "Laissez un message public ou un commentaire sur le système.",
+        visitors_title: "Centre de commande",
+        visitors_subtitle: "Métriques en direct",
+        guestbook_title: "Livre d'or",
+        guestbook_desc: "Laissez un message public ou un retour sur le portfolio.",
         vlogs_title: "La vie d'un ingénieur",
-        vlogs_subtitle: "Vlogs et voyage",
+        vlogs_subtitle: "Vlogs & parcours",
         vlog1_title: "Journée à kLab",
-        vlog1_desc: "Innovation et communauté au hub technologique de Kigali.",
-        vlog2_title: "Hackathon de programmation",
-        vlog2_desc: "Construire des solutions sous pression.",
-        vlog3_title: "Collaboration d'équipe",
-        vlog3_desc: "Résolution collective de problèmes.",
-        vlog4_title: "Travail Bénévole",
-        vlog4_desc: "Aider la communauté grâce à la technologie.",
-        vlog5_title: "Explorer de nouvelles technologies",
-        vlog5_desc: "Toujours apprendre.",
-        vlog6_title: "Routine matinale",
-        vlog6_desc: "Commencer la journée avec du café et du code.",
+        vlog1_desc: "Explorer l'innovation et la communauté du hub technologique de Kigali.",
+        vlog2_title: "Coder et construire",
+        vlog2_desc: "Créer des solutions et partager l'énergie du développeur.",
+        vlog3_title: "Motivation & équipe",
+        vlog3_desc: "Paroles de motivation sur la progression et le travail d'équipe.",
+        vlog4_title: "Bénévolat",
+        vlog4_desc: "Soutenir la communauté grâce à la technologie.",
+        vlog5_title: "Découvrir de nouvelles technologies",
+        vlog5_desc: "Toujours apprendre, toujours progresser.",
+        vlog6_title: "Routine du matin",
+        vlog6_desc: "Commencer la journée avec du café et de l'architecture backend.",
         honors_title: "Réalisations",
-        honors_subtitle: "Honneurs et récompenses",
-        honor1_title: "Meilleur performeur",
-        honor1_desc: "Reconnu pour son excellence dans la résolution de problèmes algorithmiques.",
+        honors_subtitle: "Honneurs & récompenses",
+        honor1_title: "Meilleure performance",
+        honor1_desc: "Reconnu pour l'excellence en résolution de problèmes algorithmiques.",
         honor2_title: "Liste du doyen",
         honor2_desc: "Excellence académique en génie logiciel à l'AUCA.",
         honor3_title: "Excellence A2SV",
-        honor3_desc: "Progrès exceptionnels dans le programme de formation A2SV.",
-        honor4_title: "IA et apprentissage automatique",
+        honor3_desc: "Progression remarquable dans le programme de formation A2SV.",
+        honor4_title: "IA & apprentissage automatique",
         honor4_desc: "Expertise certifiée dans le développement de systèmes intelligents et de modèles de données.",
         honor5_title: "Communication professionnelle",
         honor5_desc: "Maîtrise du storytelling technique et de la collaboration professionnelle.",
-        contact_title: "Système de Contact",
-        contact_subtitle: "Contactez-nous",
+        contact_title: "SYSTEME_CONTACT",
+        contact_subtitle: "Entrer en contact",
         contact_h2_span: "incroyable",
         contact_h2_text: "Construisons quelque chose d'",
-        contact_email: "EMAIL",
-        contact_tel: "TEL",
+        contact_email: "E-MAIL",
+        contact_tel: "APPEL",
         contact_loc: "LIEU",
         form_fn: "Prénom",
         form_ln: "Nom",
-        form_em: "Adresse Email",
+        form_em: "Adresse email",
         form_msg: "Message",
-        form_btn: "Envoyer le Paquet",
-        view_cert: "Voir le Certificat",
-        footer_copy: "© 2026"
+        form_btn: "Envoyer",
+        form_success: "Message envoyé avec succès. Enock vous répondra bientôt.",
+        form_error: "Un problème est survenu lors de l'envoi de votre message.",
+        cv_modal_title: "Télécharger le CV",
+        cv_modal_copy: "Veuillez saisir votre email avant de télécharger le CV.",
+        cv_modal_placeholder: "Entrez votre email",
+        cv_modal_submit: "Continuer vers le téléchargement",
+        cv_form_success: "Merci. Votre téléchargement démarre maintenant.",
+        cv_form_error: "Impossible de démarrer le téléchargement. Veuillez réessayer.",
+        view_cert: "Voir le certificat",
+        footer_copy: "Copyright © 2026"
     }
 };
 
@@ -552,6 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        currentLang = lang;
         localStorage.setItem('preferredLang', lang);
     }
 
@@ -781,6 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cvForm) {
         cvForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const t = translations[currentLang] || translations.en;
 
             const originalBtnText = cvSubmitBtn.innerText;
             cvSubmitBtn.innerText = 'VERIFYING_EMAIL...';
@@ -797,14 +835,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }).then(response => {
                 if (response.ok) {
+                    cvFormSuccess.innerText = t.cv_form_success;
                     cvFormSuccess.style.display = 'block';
                     cvForm.reset();
                     startCvDownload();
                     setTimeout(closeCvDownloadModal, 1200);
                 } else {
+                    cvFormError.innerText = t.cv_form_error;
                     cvFormError.style.display = 'block';
                 }
             }).catch(() => {
+                cvFormError.innerText = t.cv_form_error;
                 cvFormError.style.display = 'block';
             }).finally(() => {
                 cvSubmitBtn.innerText = originalBtnText;
@@ -831,6 +872,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const t = translations[currentLang] || translations.en;
             
             // UI State: Sending
             const originalBtnText = submitBtn.innerText;
@@ -859,13 +901,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (Object.hasOwn(data, 'errors')) {
                             formError.innerText = data["errors"].map(error => error["message"]).join(", ");
                         } else {
-                            formError.innerText = "Oops! There was a problem submitting your form";
+                            formError.innerText = t.form_error;
                         }
                         formError.style.display = 'block';
                     })
                 }
             }).catch(error => {
-                formError.innerText = "Oops! There was a problem submitting your form";
+                formError.innerText = t.form_error;
                 formError.style.display = 'block';
             }).finally(() => {
                 submitBtn.innerText = originalBtnText;

@@ -33,7 +33,6 @@
                     <li><a href="#education" data-i18n="nav_education">Education</a></li>
                     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
                     <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-                    <li><a href="#visitors" data-i18n="nav_visitors">Visitors</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="nav-controls">
@@ -69,7 +68,7 @@
                     <h1><span data-i18n-span="hero_h1_span">Building</span> <span data-i18n-span="hero_h1_text">Digital Experiences.</span></h1>
                     <p data-i18n="hero_desc">I am Enock Humure, a Software Engineering student at AUCA and A2SV trainee, crafting high-performance digital solutions.</p>
                     <div class="hero-buttons">
-                        <a href="Enock_Humure_CV_.pdf" class="btn-primary engineering-btn" download data-i18n="btn_cv">DOWNLOAD_CV.pdf</a>
+                        <a href="Enock_Humure_CV_.pdf" class="btn-primary engineering-btn" id="cv-download-btn" data-i18n="btn_cv">DOWNLOAD_CV.pdf</a>
                         <a href="#projects" class="btn-secondary" data-i18n="btn_work">VIEW_WORK</a>
                     </div>
                 </div>
@@ -92,7 +91,7 @@
                             <p><span class="prompt">enock@kali:~$</span> location</p>
                             <p class="term-out">Kigali, Rwanda</p>
                             <p><span class="prompt">enock@kali:~$</span> visitors_count</p>
-                            <p class="term-out" id="visit-counter" style="cursor: pointer; text-decoration: underline;" title="Click to view access logs">000000</p>
+                            <p class="term-out" id="visit-counter">000000</p>
                             <p><span class="prompt">enock@kali:~$</span> <span id="cursor-blink">_</span></p>
                         </div>
                     </div>
@@ -100,19 +99,6 @@
             </div>
         </div>
     </section>
-
-    <!-- System Logs Modal -->
-    <div id="logs-modal" class="modal">
-        <div class="modal-content project-modal-content">
-            <span class="close-logs-modal close-modal">&times;</span>
-            <div class="project-details-body">
-                <h2 class="modal-title">SYSTEM_ACCESS_LOGS</h2>
-                <div id="logs-content" class="terminal-body" style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
-                    <p class="prompt">[FETCHING_REMOTE_DATA...]</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -319,54 +305,6 @@
         </div>
     </section>
 
-    <!-- Command Center / Visitors Section -->
-    <section class="visitors" id="visitors">
-        <div class="container">
-            <p class="section-subtitle" data-i18n="visitors_subtitle">Live Metrics</p>
-            <h2 class="section-title" data-i18n="visitors_title">Command Center</h2>
-
-            <div class="bento-grid">
-                <!-- Live Monitor -->
-                <div class="bento-card span-2">
-                    <div class="terminal-header" style="margin-bottom: 20px;">
-                        <span class="terminal-title">GLOBAL_VISITOR_MONITOR</span>
-                    </div>
-                    <div style="text-align: center; padding: 40px 0;">
-                        <h1 id="global-counter" style="font-size: 84px; color: var(--accent-blue); font-family: 'JetBrains Mono', monospace; text-shadow: 0 0 30px rgba(0, 209, 255, 0.3);">001245</h1>
-                        <p style="color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-top: 10px;">Total Verified Sessions</p>
-                    </div>
-                    <div class="modal-footer" style="justify-content: center; border: none;">
-                        <a href="visitors.html" class="btn-primary" id="launch-dash"><i class="fas fa-chart-line"></i> Launch Full Dashboard</a>
-                    </div>
-                </div>
-
-                <!-- Guestbook / Terminal Chat -->
-                <div class="bento-card span-2">
-                    <h3 data-i18n="guestbook_title">Terminal Chat</h3>
-                    <p data-i18n="guestbook_desc" style="margin-bottom: 25px;">Post a message to the public system logs.</p>
-                    
-                    <div id="comment-success" style="display: none; color: var(--accent-blue); margin-bottom: 15px; font-size: 14px;">[MESSAGE_ENCRYPTED_AND_SENT]</div>
-
-                    <div class="terminal-chat-window" style="background: rgba(0,0,0,0.3); border-radius: 10px; border: 1px solid var(--border-glass); padding: 15px; height: 250px; overflow-y: auto; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace;">
-                        <div id="comments-display">
-                            <div class="comment-item" style="margin-bottom: 12px;">
-                                <span style="color: var(--accent-purple); font-size: 11px;">[14:22] Guest_88:</span>
-                                <span style="color: white; font-size: 12px; margin-left: 5px;">System design looks clean! 🚀</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form id="guestbook-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
-                        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px;">
-                            <input type="text" name="name" placeholder="User" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 10px; border-radius: 8px; color: white; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
-                            <input type="text" name="comment" placeholder="Type message..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); padding: 10px; border-radius: 8px; color: white; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
-                        </div>
-                        <button type="submit" class="btn-secondary full" id="comment-btn" style="width: 100%; margin-top: 15px; padding: 10px; font-size: 12px;">SEND_PACKET <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Honors Section -->
     <section class="honors" id="honors">
@@ -430,6 +368,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- CV Download Modal -->
+    <div id="cv-modal" class="modal">
+        <div class="modal-content cv-modal-content">
+            <span class="close-cv-modal close-modal">&times;</span>
+            <div class="cv-modal-body">
+                <p class="section-subtitle">CV Access</p>
+                <h2 class="modal-title">Download My CV</h2>
+                <p class="cv-modal-copy">Please enter your email before downloading my CV. I use it only to know who requested it and to follow up professionally when relevant.</p>
+                <div id="cv-form-success" class="cv-form-feedback" style="display: none;">Thanks. Your download is starting now.</div>
+                <div id="cv-form-error" class="cv-form-feedback cv-form-feedback-error" style="display: none;">I could not start the download. Please try again.</div>
+                <form id="cv-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
+                    <input type="hidden" name="requestType" value="CV Download Request">
+                    <input type="hidden" name="message" value="A visitor requested Enock Humure's CV.">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary cv-submit-btn" id="cv-submit-btn">Continue to Download</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Project Detail Modal -->
     <div id="project-modal" class="modal">

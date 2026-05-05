@@ -645,6 +645,62 @@ footer { padding: 70px 0; border-top: 1.5px solid var(--border-glass); text-alig
     box-shadow: 0 0 50px rgba(0, 209, 255, 0.1);
 }
 
+.cv-modal-content {
+    background: var(--bg-dark);
+    max-width: 560px;
+    padding: 40px;
+    border: 2px solid var(--border-glass);
+    box-shadow: 0 0 50px rgba(0, 209, 255, 0.1);
+}
+
+.cv-modal-body {
+    color: var(--text-primary);
+}
+
+.cv-modal-copy {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cv-modal-body form {
+    display: grid;
+    gap: 16px;
+}
+
+.cv-modal-body input {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 1.5px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.cv-modal-body input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.08);
+}
+
+.cv-submit-btn {
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.cv-form-feedback {
+    margin-bottom: 16px;
+    color: #00FF88;
+    font-weight: 600;
+}
+
+.cv-form-feedback-error {
+    color: #ff6b6b;
+}
+
 .modal-title { font-size: 36px; margin-bottom: 20px; color: var(--accent-blue); }
 .modal-desc { font-size: 18px; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.8; }
 

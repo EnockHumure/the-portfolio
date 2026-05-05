@@ -739,6 +739,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // CV download gate
+    const cvDownloadBtn = document.getElementById('cv-download-btn');
+    const cvModal = document.getElementById('cv-modal');
+    const closeCvModal = document.querySelector('.close-cv-modal');
+    const cvForm = document.getElementById('cv-form');
+    const cvSubmitBtn = document.getElementById('cv-submit-btn');
+    const cvFormSuccess = document.getElementById('cv-form-success');
+    const cvFormError = document.getElementById('cv-form-error');
+    const cvFileUrl = 'Enock_Humure_CV_.pdf';
+
+    function closeCvDownloadModal() {
+        if (!cvModal) return;
+        cvModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function startCvDownload() {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = cvFileUrl;
+        downloadLink.download = 'Enock_Humure_CV_.pdf';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+    }
+
+    if (cvDownloadBtn && cvModal) {
+        cvDownloadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            cvFormSuccess.style.display = 'none';
+            cvFormError.style.display = 'none';
+            cvModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    if (closeCvModal) {
+        closeCvModal.addEventListener('click', closeCvDownloadModal);
+    }
+
+    if (cvForm) {
+        cvForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const originalBtnText = cvSubmitBtn.innerText;
+            cvSubmitBtn.innerText = 'VERIFYING_EMAIL...';
+            cvSubmitBtn.disabled = true;
+            cvSubmitBtn.style.opacity = '0.7';
+            cvFormSuccess.style.display = 'none';
+            cvFormError.style.display = 'none';
+
+            fetch(cvForm.action, {
+                method: 'POST',
+                body: new FormData(cvForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    cvFormSuccess.style.display = 'block';
+                    cvForm.reset();
+                    startCvDownload();
+                    setTimeout(closeCvDownloadModal, 1200);
+                } else {
+                    cvFormError.style.display = 'block';
+                }
+            }).catch(() => {
+                cvFormError.style.display = 'block';
+            }).finally(() => {
+                cvSubmitBtn.innerText = originalBtnText;
+                cvSubmitBtn.disabled = false;
+                cvSubmitBtn.style.opacity = '1';
+            });
+        });
+    }
+
     // Terminal Blink Effect
     const blink = document.getElementById('cursor-blink');
     if (blink) {
@@ -851,18 +926,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Global Visitor Counter Sync
-    const globalCounterEl = document.getElementById('global-counter');
-    const refreshBtn = document.getElementById('refresh-metrics');
-
-    function syncCounters(count) {
-        if (counterEl) animateCounter(counterEl, count);
-        if (globalCounterEl) animateCounter(globalCounterEl, count);
-    }
+    // Keep one real visitor count in the hero terminal.
+    const counterEl = document.getElementById('visit-counter');
 
     function animateCounter(el, target) {
         let currentDisplay = 0;
-        const duration = 2000;
         const timer = setInterval(() => {
             currentDisplay += Math.ceil(target / 50);
             if (currentDisplay >= target) {
@@ -874,109 +942,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 30);
     }
 
-    if (counterEl || globalCounterEl) {
+    if (counterEl) {
         fetch('https://api.counterapi.dev/v1/enock-humure-portfolio/visits/up')
             .then(res => res.json())
-            .then(data => syncCounters(data.count || 1240))
-            .catch(() => syncCounters(1245)); // Fallback
-    }
-
-    if (refreshBtn) {
-        refreshBtn.addEventListener('click', () => {
-            refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SYNCING...';
-            fetch('https://api.counterapi.dev/v1/enock-humure-portfolio/visits')
-                .then(res => res.json())
-                .then(data => {
-                    syncCounters(data.count || 1240);
-                    setTimeout(() => refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Data', 1000);
-                });
-        });
-    }
-
-    // Guestbook Logic - Terminal Chat Style
-    const guestbookForm = document.getElementById('guestbook-form');
-    const commentsDisplay = document.getElementById('comments-display');
-    const commentSuccess = document.getElementById('comment-success');
-
-    if (guestbookForm) {
-        guestbookForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(guestbookForm);
-            const name = formData.get('name');
-            const comment = formData.get('comment');
-            const now = new Date();
-            const timeStr = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
-
-            // Send to Formspree
-            fetch(guestbookForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    commentSuccess.style.display = 'block';
-                    
-                    // Add to UI immediately in terminal style
-                    const newComment = document.createElement('div');
-                    newComment.className = 'comment-item';
-                    newComment.style = 'margin-bottom: 12px; animation: fadeIn 0.5s ease;';
-                    newComment.innerHTML = `
-                        <span style="color: var(--accent-purple); font-size: 11px;">[${timeStr}] ${name}:</span>
-                        <span style="color: white; font-size: 12px; margin-left: 5px;">${comment}</span>
-                    `;
-                    commentsDisplay.prepend(newComment);
-                    guestbookForm.reset();
-                    setTimeout(() => commentSuccess.style.display = 'none', 5000);
-                }
+            .then(data => animateCounter(counterEl, data.count || 0))
+            .catch(() => {
+                counterEl.innerText = '000000';
             });
-        });
-    }
-
-    // System Logs Logic
-    if (counterEl) {
-        counterEl.addEventListener('click', () => {
-            logsModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            logsContent.innerHTML = '<p class="prompt">[ACCESSING_CORE_DATABASES...]</p>';
-
-            // Fetch visitor info
-            fetch('https://ipapi.co/json/')
-                .then(res => res.json())
-                .then(data => {
-                    setTimeout(() => {
-                        logsContent.innerHTML = `
-                            <p class="prompt">>> ACCESS_GRANTED</p>
-                            <p style="color: #00FF88; margin-top: 10px;">[CURRENT_SESSION_DATA]</p>
-                            <p>IP_ADDRESS: ${data.ip || 'HIDDEN'}</p>
-                            <p>LOCATION: ${data.city}, ${data.country_name}</p>
-                            <p>PROVIDER: ${data.org || 'UNKNOWN'}</p>
-                            <p>LAT_LONG: ${data.latitude}, ${data.longitude}</p>
-                            <p>TIMEZONE: ${data.timezone}</p>
-                            <p style="color: #00FF88; margin-top: 10px;">[DEVICE_METRICS]</p>
-                            <p>USER_AGENT: ${navigator.userAgent.substring(0, 50)}...</p>
-                            <p>PLATFORM: ${navigator.platform}</p>
-                            <p>LANGUAGE: ${navigator.language}</p>
-                            <p style="color: var(--accent-blue); margin-top: 15px;">>> SYSTEM_STATUS: MONITORING_ACTIVE</p>
-                        `;
-                    }, 800);
-                })
-                .catch(() => {
-                    logsContent.innerHTML = '<p style="color: #FF4D4D;">>> ERROR: ENCRYPTION_LAYER_BLOCKED_REQUEST</p>';
-                });
-        });
-    }
-
-    if (closeLogsModal) {
-        closeLogsModal.addEventListener('click', () => {
-            logsModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
     }
 
     window.addEventListener('click', (e) => {
-        if (e.target === logsModal) {
-            logsModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+        if (e.target === cvModal) {
+            closeCvDownloadModal();
         }
     });
 });

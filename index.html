@@ -33,6 +33,7 @@
                     <li><a href="#education" data-i18n="nav_education">Education</a></li>
                     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
                     <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li><a href="#vlogs" data-i18n="nav_vlogs">Vlogs</a></li>
                     <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="nav-controls">
@@ -107,7 +108,7 @@
                 <div class="hero-visual">
                     <div class="img-tilt-container">
                         <div class="img-layer">
-                            <img src="inock pic.jpg" alt="Enock Headshot" class="img-primary">
+                            <img src="inock-pic.png" alt="Enock Headshot" class="img-primary">
                             <img src="convention.jpg" alt="Enock Convention" class="img-secondary">
                         </div>
                     </div>
@@ -317,12 +318,83 @@
                     <i class="fas fa-brain card-icon" style="color: #00FF88;"></i>
                     <h3 data-i18n="honor4_title">AI & Machine Learning</h3>
                     <p data-i18n="honor4_desc">Certified expertise in developing intelligent systems and data models.</p>
-                    <a href="certificate of  ai and ml.pdf" class="btn-secondary" style="margin-top: 15px; display: inline-block;" target="_blank" data-i18n="view_cert"><i class="fas fa-file-pdf"></i> View Certificate</a>
+                    <a href="certificate-ai-ml.pdf" class="btn-secondary" style="margin-top: 15px; display: inline-block;" target="_blank" data-i18n="view_cert"><i class="fas fa-file-pdf"></i> View Certificate</a>
                 </div>
                 <div class="bento-card span-2">
                     <i class="fas fa-comments card-icon" style="color: #FF8800;"></i>
                     <h3 data-i18n="honor5_title">Professional Communication</h3>
                     <p data-i18n="honor5_desc">Mastery in technical storytelling and professional collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vlogs Gallery -->
+    <section class="vlogs" id="vlogs">
+        <div class="container">
+            <p class="section-subtitle" data-i18n="vlogs_subtitle">Vlogs & Journey</p>
+            <h2 class="section-title" data-i18n="vlogs_title">Life as an Engineer</h2>
+            
+            <div class="bento-grid">
+                <div class="vlog-card bento-card span-2">
+                    <div class="vlog-media-container">
+                        <img src="day-at-klab.jpeg" alt="Vlog 1" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog1_title">Day at kLab</h3>
+                        <p data-i18n="vlog1_desc">Exploring innovation and community at Kigali's tech hub.</p>
+                    </div>
+                </div>
+                <div class="vlog-card bento-card span-2">
+                    <div class="vlog-media-container">
+                        <img src="coding-hackathon.jpeg" alt="Vlog 2" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog2_title">Vibing/Coding</h3>
+                        <p data-i18n="vlog2_desc">Building solutions and sharing the developer vibe.</p>
+                    </div>
+                </div>
+                <div class="vlog-card bento-card">
+                    <div class="vlog-media-container">
+                        <img src="team-collaboration.jpeg" alt="Vlog 3" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog3_title">Motivation/Team</h3>
+                        <p data-i18n="vlog3_desc">Motivational words on growth and team collaboration.</p>
+                    </div>
+                </div>
+                <div class="vlog-card bento-card">
+                    <div class="vlog-media-container">
+                        <img src="volunter1.jpeg" alt="Vlog 4" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog4_title">Volunteer Work</h3>
+                        <p data-i18n="vlog4_desc">Giving back to the community through technology.</p>
+                    </div>
+                </div>
+                <div class="vlog-card bento-card">
+                    <div class="vlog-media-container">
+                        <img src="exploring-new-languages.jpeg" alt="Vlog 5" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog5_title">Exploring New Tech</h3>
+                        <p data-i18n="vlog5_desc">Always learning, always growing.</p>
+                    </div>
+                </div>
+                <div class="vlog-card bento-card">
+                    <div class="vlog-media-container">
+                        <img src="morning-routine.jpeg" alt="Vlog 6" class="vlog-img">
+                        <div class="vlog-play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="vlog-content">
+                        <h3 data-i18n="vlog6_title">Morning Routine</h3>
+                        <p data-i18n="vlog6_desc">Starting the day with coffee and backend architecture.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,9 +417,11 @@
                         <div id="form-error" data-i18n="form_error" style="display: none; color: #ff4d4d; margin-bottom: 20px; font-weight: 600;">Oops! There was a problem sending your message.</div>
 
                         <form id="contact-form" action="https://formspree.io/f/xjgjgbgz" method="POST">
-                            <input type="text" name="name" placeholder="Name" class="full" data-i18n="form_fn" required>
-                            <input type="email" name="email" placeholder="Email" class="full" data-i18n="form_em" required>
-                            <textarea name="message" rows="5" placeholder="Message" class="full" data-i18n="form_msg" required></textarea>
+                            <div class="contact-form-group">
+                                <input type="text" name="name" placeholder="Name" data-i18n="form_fn" required>
+                                <input type="email" name="email" placeholder="Email" data-i18n="form_em" required>
+                            </div>
+                            <textarea name="message" rows="4" placeholder="Message" class="full" data-i18n="form_msg" required></textarea>
                             <button type="submit" class="btn-send full" id="submit-btn" data-i18n="form_btn">Send Message</button>
                         </form>
                     </div>
@@ -369,9 +443,6 @@
                             </a>
                             <a href="https://github.com/EnockHumure" target="_blank" rel="noopener noreferrer" class="contact-list-item">
                                 <span class="contact-list-key">GitHub</span>
-                            </a>
-                            <a href="https://leetcode.com/u/coach_Humure/" target="_blank" rel="noopener noreferrer" class="contact-list-item">
-                                <span class="contact-list-key">LeetCode</span>
                             </a>
                         </div>
                     </div>

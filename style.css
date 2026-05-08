@@ -510,63 +510,7 @@ section { padding: 120px 0; }
     }
 }
 
-/* ====================== VLOGS GALLERY ====================== */
-.vlog-card {
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.vlog-media-container {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.vlog-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s ease;
-}
-
-.vlog-play-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 209, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-size: 20px;
-    opacity: 0;
-    transition: 0.3s ease;
-    z-index: 2;
-}
-
-.vlog-card:hover .vlog-play-overlay {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.vlog-card:hover .vlog-img {
-    transform: scale(1.1);
-}
-
-.vlog-content {
-    padding: 25px;
-    background: linear-gradient(to top, var(--bg-card), transparent);
-}
-
-/* ====================== VIDEO MODAL ====================== */
+/* ====================== MODAL BASE ====================== */
 .modal {
     display: none;
     position: fixed;
@@ -590,11 +534,6 @@ section { padding: 120px 0; }
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid var(--border-glass);
-}
-
-#modal-video {
-    width: 100%;
-    display: block;
 }
 
 .close-modal {

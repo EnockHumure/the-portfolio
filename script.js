@@ -354,7 +354,7 @@
         cv_form_success: "Asante. Upakuaji wako unaanza sasa.",
         cv_form_error: "Imeshindikana kuanza upakuaji. Tafadhali jaribu tena.",
         view_cert: "Angalia Cheti",
-        footer_copy: "Copyright © 2026"
+        footer_copy: "Copyright © 2026 Enock Humure"
     },
     fr: {
         nav_home: "Accueil",
@@ -475,7 +475,7 @@
         cv_form_success: "Merci. Votre téléchargement démarre maintenant.",
         cv_form_error: "Impossible de démarrer le téléchargement. Veuillez réessayer.",
         view_cert: "Voir le certificat",
-        footer_copy: "Copyright © 2026"
+        footer_copy: "Copyright © 2026 Enock Humure"
     }
 };
 

@@ -619,16 +619,16 @@ section { padding: 120px 0; }
     backdrop-filter: var(--glass-blur);
     border: 2px solid var(--border-glass);
     border-radius: 28px;
-    padding: 70px;
+    padding: 50px;
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.95fr);
-    gap: 70px;
+    gap: 50px;
     align-items: start;
 }
 
 .contact-panel {
     display: grid;
-    gap: 32px;
+    gap: 25px;
 }
 
 .contact-section-copy h2 {
@@ -676,39 +676,37 @@ textarea { min-height: 180px; resize: vertical; }
 }
 
 .contact-list-item {
-    display: grid;
-    grid-template-columns: 88px minmax(0, 1fr);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 14px;
-    padding: 16px 18px;
+    padding: 16px 20px;
     border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.03);
+    border: 1.5px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--text-primary);
     text-decoration: none;
-    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list-item:hover {
-    transform: translateY(-2px);
-    border-color: rgba(0, 209, 255, 0.45);
-    background: rgba(255,255,255,0.06);
+    transform: translateX(8px);
+    border-color: var(--accent-blue);
+    background: rgba(0, 209, 255, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 209, 255, 0.1);
 }
 
 .contact-list-key {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-secondary);
-    padding-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
 }
 
 .contact-list-value {
-    font-size: 14px;
-    line-height: 1.35;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 13px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    font-family: var(--font-mono);
 }
 
 .resume-card-copy {
@@ -723,14 +721,22 @@ textarea { min-height: 180px; resize: vertical; }
 }
 
 /* ====================== FOOTER ====================== */
-footer { padding: 70px 0; border-top: 1.5px solid var(--border-glass); text-align: center; color: var(--text-secondary); }
+footer { padding: 40px 0; border-top: 1.5px solid var(--border-glass); background: rgba(5, 6, 10, 0.8); }
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p { margin: 0; color: var(--text-secondary); }
 
 .footer-social {
-    margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .footer-social a {

@@ -475,7 +475,7 @@
         cv_form_success: "Merci. Votre téléchargement démarre maintenant.",
         cv_form_error: "Impossible de démarrer le téléchargement. Veuillez réessayer.",
         view_cert: "Voir le certificat",
-        footer_copy: "Copyright © 2026 Enock Humure"
+        footer_copy: "Copyright@2026 Enock Humure"
     }
 };
 
@@ -1036,3 +1036,4 @@ revealStyle.textContent = `
     .reveal-visible { opacity: 1; transform: translateY(0); }
 `;
 document.head.appendChild(revealStyle);
+vealStyle);

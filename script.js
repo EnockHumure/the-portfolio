@@ -90,6 +90,7 @@
         contact_intro: "Have a project in mind or want to collaborate? Fill out the form and I will get back to you.",
         contact_connect_label: "Connect with me",
         contact_email_label: "Email",
+        contact_tel_label: "Phone",
         contact_resume_label: "Resume",
         contact_resume_copy: "View and download my CV after entering your email.",
         contact_resume_btn: "View & Download",

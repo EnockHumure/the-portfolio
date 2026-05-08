@@ -85,15 +85,22 @@
         honor5_title: "Professional Communication",
         honor5_desc: "Mastery in technical storytelling and professional collaboration.",
         contact_title: "CONTACT_SYS",
-        contact_subtitle: "Get in Touch",
+        contact_subtitle: "Get In Touch",
+        contact_heading: "Send me a message",
+        contact_intro: "Have a project in mind or want to collaborate? Fill out the form and I will get back to you.",
+        contact_connect_label: "Connect with me",
+        contact_email_label: "Email",
+        contact_resume_label: "Resume",
+        contact_resume_copy: "View and download my CV after entering your email.",
+        contact_resume_btn: "View & Download",
         contact_h2_span: "amazing",
         contact_h2_text: "Let's build something",
         contact_email: "E-MAIL",
         contact_tel: "CALL",
         contact_loc: "PLACE",
-        form_fn: "First Name",
+        form_fn: "Name",
         form_ln: "Last Name",
-        form_em: "Email Address",
+        form_em: "Email",
         form_msg: "Message",
         form_btn: "Send Message",
         form_success: "Message sent successfully! Enock will get back to you soon.",
@@ -199,13 +206,20 @@
         honor5_title: "Itumanaho ry'Umwuga",
         honor5_desc: "Ubuhanga mu kugaragaza imishinga y'ikoranabuhanga no gukorana n'abandi kinyamwuga.",
         contact_title: "Twandikire",
-        contact_subtitle: "Vugana natwe",
+        contact_subtitle: "Get In Touch",
+        contact_heading: "Ohereza ubutumwa",
+        contact_intro: "Niba ufite umushinga cyangwa ushaka ubufatanye, andika ubutumwa hano nkuzasubiza.",
+        contact_connect_label: "Vugana nanjye",
+        contact_email_label: "Imeyili",
+        contact_resume_label: "CV",
+        contact_resume_copy: "Reba kandi ukuremo CV nyuma yo kubanza kwandika imeyili yawe.",
+        contact_resume_btn: "Reba & Kuramo",
         contact_h2_span: "bitangaje",
         contact_h2_text: "Twubakane ikintu",
         contact_email: "IMEYILI",
         contact_tel: "TEL",
         contact_loc: "AHO NDI",
-        form_fn: "Izina rya mbere",
+        form_fn: "Amazina",
         form_ln: "Izina ry'umuryango",
         form_em: "Imeyili yawe",
         form_msg: "Ubutumwa bwawe",
@@ -313,15 +327,22 @@
         honor5_title: "Mawasiliano ya Kitaalam",
         honor5_desc: "Ujuzi katika usimulizi wa kiufundi na ushirikiano wa kitaalam.",
         contact_title: "MFUMO_MAWASILIANO",
-        contact_subtitle: "Wasiliana Nasi",
+        contact_subtitle: "Get In Touch",
+        contact_heading: "Nitume ujumbe",
+        contact_intro: "Una mradi au unataka kushirikiana? Jaza fomu hii nami nitakujibu.",
+        contact_connect_label: "Ungana nami",
+        contact_email_label: "Barua pepe",
+        contact_resume_label: "Wasifu",
+        contact_resume_copy: "Tazama na pakua CV yangu baada ya kuandika barua pepe yako kwanza.",
+        contact_resume_btn: "Tazama & Pakua",
         contact_h2_span: "ajabu",
         contact_h2_text: "Tujenge kitu cha",
         contact_email: "BARUA_PEPE",
         contact_tel: "SIMU",
         contact_loc: "MAHALI",
-        form_fn: "Jina la Kwanza",
+        form_fn: "Jina",
         form_ln: "Jina la Mwisho",
-        form_em: "Anwani ya Barua Pepe",
+        form_em: "Barua pepe",
         form_msg: "Ujumbe",
         form_btn: "Tuma Ujumbe",
         form_success: "Ujumbe umetumwa vizuri. Enock atakujibu hivi karibuni.",
@@ -428,12 +449,19 @@
         honor5_desc: "Maîtrise du storytelling technique et de la collaboration professionnelle.",
         contact_title: "SYSTEME_CONTACT",
         contact_subtitle: "Entrer en contact",
+        contact_heading: "Envoyez-moi un message",
+        contact_intro: "Vous avez un projet ou une collaboration en tête ? Remplissez le formulaire et je vous répondrai.",
+        contact_connect_label: "Me contacter",
+        contact_email_label: "Email",
+        contact_resume_label: "CV",
+        contact_resume_copy: "Consultez et téléchargez mon CV après avoir saisi votre email.",
+        contact_resume_btn: "Voir & Télécharger",
         contact_h2_span: "incroyable",
         contact_h2_text: "Construisons quelque chose d'",
         contact_email: "E-MAIL",
         contact_tel: "APPEL",
         contact_loc: "LIEU",
-        form_fn: "Prénom",
+        form_fn: "Nom",
         form_ln: "Nom",
         form_em: "Adresse email",
         form_msg: "Message",
@@ -777,7 +805,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // CV download gate
-    const cvDownloadBtn = document.getElementById('cv-download-btn');
+    const cvDownloadBtns = document.querySelectorAll('.cv-download-trigger, #cv-download-btn');
     const cvModal = document.getElementById('cv-modal');
     const closeCvModal = document.querySelector('.close-cv-modal');
     const cvForm = document.getElementById('cv-form');
@@ -801,13 +829,15 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadLink.remove();
     }
 
-    if (cvDownloadBtn && cvModal) {
-        cvDownloadBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            cvFormSuccess.style.display = 'none';
-            cvFormError.style.display = 'none';
-            cvModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+    if (cvDownloadBtns.length && cvModal) {
+        cvDownloadBtns.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                cvFormSuccess.style.display = 'none';
+                cvFormError.style.display = 'none';
+                cvModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
         });
     }
 

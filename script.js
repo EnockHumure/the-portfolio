@@ -113,7 +113,7 @@
         cv_form_success: "Thanks. Your download is starting now.",
         cv_form_error: "I could not start the download. Please try again.",
         view_cert: "View Certificate",
-        footer_copy: "Copyright © 2026"
+        footer_copy: "Copyright@2026 Enock Humure"
     },
     rw: {
         nav_home: "Ahabanza",
@@ -234,7 +234,7 @@
         cv_form_success: "Murakoze. Gukuramo biri gutangira.",
         cv_form_error: "Ntibyakunze gutangira gukuramo. Ongera ugerageze.",
         view_cert: "Reba Impamyabumenyi",
-        footer_copy: "Copyright © 2026"
+        footer_copy: "Copyright@2026 Enock Humure"
     },
     sw: {
         nav_home: "Mwanzo",
@@ -355,7 +355,7 @@
         cv_form_success: "Asante. Upakuaji wako unaanza sasa.",
         cv_form_error: "Imeshindikana kuanza upakuaji. Tafadhali jaribu tena.",
         view_cert: "Angalia Cheti",
-        footer_copy: "Copyright © 2026 Enock Humure"
+        footer_copy: "Copyright@2026 Enock Humure"
     },
     fr: {
         nav_home: "Accueil",
@@ -1037,4 +1037,3 @@ revealStyle.textContent = `
     .reveal-visible { opacity: 1; transform: translateY(0); }
 `;
 document.head.appendChild(revealStyle);
-vealStyle);

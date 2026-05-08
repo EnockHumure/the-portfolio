@@ -672,12 +672,14 @@ textarea { min-height: 180px; resize: vertical; }
 
 .contact-list {
     display: grid;
-    gap: 14px;
+    gap: 12px;
 }
 
 .contact-list-item {
     display: grid;
-    gap: 4px;
+    grid-template-columns: 88px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
     padding: 16px 18px;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.08);
@@ -698,12 +700,15 @@ textarea { min-height: 180px; resize: vertical; }
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-secondary);
+    padding-top: 2px;
 }
 
 .contact-list-value {
-    font-size: 15px;
-    line-height: 1.6;
-    word-break: break-word;
+    font-size: 14px;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .resume-card-copy {
@@ -719,6 +724,25 @@ textarea { min-height: 180px; resize: vertical; }
 
 /* ====================== FOOTER ====================== */
 footer { padding: 70px 0; border-top: 1.5px solid var(--border-glass); text-align: center; color: var(--text-secondary); }
+
+.footer-social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    color: var(--text-secondary);
+    font-size: 24px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+}
 
 /* ====================== PROJECT MODAL ENHANCEMENTS ====================== */
 .project-modal-content {
@@ -881,6 +905,8 @@ footer { padding: 70px 0; border-top: 1.5px solid var(--border-glass); text-alig
     .contact-form .full { grid-column: span 1; }
     .contact-section-copy h2 { font-size: 34px; }
     .contact-card { padding: 22px; }
+    .contact-list-item { grid-template-columns: 1fr; gap: 6px; align-items: start; }
+    .contact-list-value { white-space: normal; overflow: visible; text-overflow: clip; }
     
     .hero { padding-top: 80px; }
     .container { width: 92%; }
